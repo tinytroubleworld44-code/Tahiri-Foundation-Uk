@@ -52,7 +52,9 @@ export const SEOHead: React.FC<SEOProps> = ({
     };
 
     // Helper to set or update link rel="canonical"
-    const fullCanonicalUrl = `${DOMAIN}${canonicalPath === '/' ? '' : canonicalPath}`;
+    const fullCanonicalUrl = canonicalPath.startsWith('http')
+      ? canonicalPath
+      : `${DOMAIN}${canonicalPath.startsWith('/') ? canonicalPath : `/${canonicalPath}`}`;
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     if (!canonicalLink) {
       canonicalLink = document.createElement('link');

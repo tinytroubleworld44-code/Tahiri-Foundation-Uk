@@ -5,49 +5,19 @@
     <script>
       (function() {
         try {
-          var g = typeof window !== 'undefined' ? window : typeof globalThis !== 'undefined' ? globalThis : null;
-          if (!g) return;
-
-          var nativeFetch = g.fetch;
-          var boundNativeFetch = typeof nativeFetch === 'function' ? nativeFetch.bind(g) : nativeFetch;
-          var currentFetch = boundNativeFetch;
-
-          // Provide writable getter & setter on Window.prototype if present
-          if (typeof Window !== 'undefined' && Window.prototype) {
-            try {
-              var protoDesc = Object.getOwnPropertyDescriptor(Window.prototype, 'fetch');
-              if (!protoDesc || protoDesc.configurable) {
-                Object.defineProperty(Window.prototype, 'fetch', {
-                  get: function() {
-                    return currentFetch;
-                  },
-                  set: function(v) {
-                    currentFetch = v;
-                  },
-                  configurable: true,
-                  enumerable: true
-                });
-              }
-            } catch (e1) {}
-          }
-
-          // Define getter & setter on global window directly to prevent "only has a getter" errors
-          try {
-            var winDesc = Object.getOwnPropertyDescriptor(g, 'fetch');
-            if (!winDesc || winDesc.configurable) {
-              Object.defineProperty(g, 'fetch', {
-                get: function() {
-                  return currentFetch;
-                },
-                set: function(v) {
-                  currentFetch = v;
-                },
+          if (typeof window !== 'undefined') {
+            var desc = Object.getOwnPropertyDescriptor(window, 'fetch');
+            if (desc && !desc.writable && desc.configurable) {
+              var f = window.fetch;
+              Object.defineProperty(window, 'fetch', {
+                value: f,
+                writable: true,
                 configurable: true,
                 enumerable: true
               });
             }
-          } catch (e2) {}
-        } catch (err) {}
+          }
+        } catch (e) {}
       })();
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

@@ -38,12 +38,18 @@ export default function App() {
   const [selectedArticleId, setSelectedArticleId] = useState<string | null>(null);
   const [selectedEventId, setSelectedEventId] = useState<string | null>(null);
 
-  // Sync state with URL hash for browser history & direct URL support
+  // Sync state with URL hash & pathname for browser history & direct URL support
   const parseHash = useCallback(() => {
     // Normalizes hash such as '#/events', '#events', '#/events/', '#/shajra-shareef', '#/', '', etc.
     let hash = window.location.hash || '';
     // Strip leading '#' and any consecutive '/' or '!'
-    const rawPath = hash.replace(/^#[/!]*/, '').trim();
+    let rawPath = hash.replace(/^#[/!]*/, '').trim();
+
+    // Check pathname when hash is empty (for direct URL loads and Netlify SPA rewrites)
+    if (!rawPath && window.location.pathname && window.location.pathname !== '/') {
+      rawPath = window.location.pathname.replace(/^\/+/, '').trim();
+    }
+
     // Split out query string or extra fragments if any
     const [path] = rawPath.split(/[?#]/);
     // Trim trailing slashes and normalize to lowercase
@@ -142,9 +148,13 @@ export default function App() {
     // Initial mount route detection
     parseHash();
 
-    // Listen for hashchange (browser back/forward buttons, manual address changes)
+    // Listen for hashchange and popstate (browser back/forward buttons, direct navigation)
     window.addEventListener('hashchange', parseHash);
-    return () => window.removeEventListener('hashchange', parseHash);
+    window.addEventListener('popstate', parseHash);
+    return () => {
+      window.removeEventListener('hashchange', parseHash);
+      window.removeEventListener('popstate', parseHash);
+    };
   }, [parseHash]);
 
   const navigateTo = useCallback((
