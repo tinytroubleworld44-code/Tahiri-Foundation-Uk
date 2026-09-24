@@ -548,9 +548,9 @@ export default function App() {
               <ShajraFeatureSection onNavigate={(p) => navigateTo(p)} />
               <SplendidAbodeFeatureSection onNavigate={(p, aId) => navigateTo(p, aId)} />
               <FeaturedTeachingsSection onNavigate={(p, aId) => navigateTo(p, aId)} />
-              <FAQSection onNavigate={(p) => navigateTo(p)} />
               <SpiritualReflectionSection />
               <FinalCTASection onNavigate={(p) => navigateTo(p)} />
+              <FAQSection onNavigate={(p) => navigateTo(p)} />
             </>
           )}
 
