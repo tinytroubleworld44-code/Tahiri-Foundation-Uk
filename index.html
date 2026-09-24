@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      (function() {
+        try {
+          var g = typeof window !== 'undefined' ? window : typeof globalThis !== 'undefined' ? globalThis : null;
+          if (!g) return;
+
+          var nativeFetch = g.fetch;
+          var boundNativeFetch = typeof nativeFetch === 'function' ? nativeFetch.bind(g) : nativeFetch;
+          var currentFetch = boundNativeFetch;
+
+          // Provide writable getter & setter on Window.prototype if present
+          if (typeof Window !== 'undefined' && Window.prototype) {
+            try {
+              var protoDesc = Object.getOwnPropertyDescriptor(Window.prototype, 'fetch');
+              if (!protoDesc || protoDesc.configurable) {
+                Object.defineProperty(Window.prototype, 'fetch', {
+                  get: function() {
+                    return currentFetch;
+                  },
+                  set: function(v) {
+                    currentFetch = v;
+                  },
+                  configurable: true,
+                  enumerable: true
+                });
+              }
+            } catch (e1) {}
+          }
+
+          // Define getter & setter on global window directly to prevent "only has a getter" errors
+          try {
+            var winDesc = Object.getOwnPropertyDescriptor(g, 'fetch');
+            if (!winDesc || winDesc.configurable) {
+              Object.defineProperty(g, 'fetch', {
+                get: function() {
+                  return currentFetch;
+                },
+                set: function(v) {
+                  currentFetch = v;
+                },
+                configurable: true,
+                enumerable: true
+              });
+            }
+          } catch (e2) {}
+        } catch (err) {}
+      })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tahiri Foundation UK | Sajjan Saeen, Zikr-e-Qalbi &amp; Spiritual Heritage</title>
+    <meta name="description" content="Explore Tahiri Foundation UK, Dargah Allahabad Sharif, Shajra Shareef, Zikr-e-Qalbi, spiritual teachings and the heritage of Sajjan Saeen." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://tahirifoundation.uk/" />
+    <meta property="og:title" content="Tahiri Foundation UK | Sajjan Saeen, Zikr-e-Qalbi &amp; Spiritual Heritage" />
+    <meta property="og:description" content="Explore Tahiri Foundation UK, Dargah Allahabad Sharif, Shajra Shareef, Zikr-e-Qalbi, spiritual teachings and the heritage of Sajjan Saeen." />
+    <meta property="og:url" content="https://tahirifoundation.uk/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tahiri Foundation UK" />
+    <meta property="og:image" content="https://tahirifoundation.uk/assets/dargah-allahabad-sharif-authentic.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tahiri Foundation UK | Sajjan Saeen, Zikr-e-Qalbi &amp; Spiritual Heritage" />
+    <meta name="twitter:description" content="Explore Tahiri Foundation UK, Dargah Allahabad Sharif, Shajra Shareef, Zikr-e-Qalbi, spiritual teachings and the heritage of Sajjan Saeen." />
+    <meta name="twitter:image" content="https://tahirifoundation.uk/assets/dargah-allahabad-sharif-authentic.jpg" />
+    <script type="application/ld+json" id="base-organization-schema">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Tahiri Foundation UK",
+      "url": "https://tahirifoundation.uk/",
+      "logo": "https://tahirifoundation.uk/assets/tahiri_logo_emblem.png",
+      "image": "https://tahirifoundation.uk/assets/dargah-allahabad-sharif-authentic.jpg",
+      "description": "Islamic and Sufi spiritual educational foundation connected with Dargah Allahabad Sharif, Sindh."
+    }
+    </script>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-white text-[#111827] antialiased selection:bg-[#0B3095]/15 selection:text-[#0B3095]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

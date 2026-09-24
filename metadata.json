@@ -1,0 +1,8 @@
+{
+  "name": "Remix Tahiri Foundation UK",
+  "description": "Islamic and Sufi spiritual content, Shajra Shareef, Naqshbandi Mujaddidi Tahiri teachings, and spiritual heritage from Dargah Allahabad Sharif, Sindh.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

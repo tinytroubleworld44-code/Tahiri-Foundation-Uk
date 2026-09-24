@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-arabic: 'Amiri', 'Noto Naskh Arabic', serif;
+
+    /* Palette variables */
+    --color-primary-blue: #0B3095;
+    --color-deep-navy: #061A4A;
+    --color-mid-blue: #1746B8;
+    --color-soft-blue: #EEF3FF;
+    --color-very-soft-blue: #F7F9FF;
+    --color-pure-white: #FFFFFF;
+    --color-text-primary: #111827;
+    --color-text-secondary: #5B6472;
+    --color-subtle-border: #E4E9F2;
+    --color-gold-accent: #C5A15A;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #FFFFFF;
+    color: #111827;
+  }
+}
+
+.font-serif-display {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-arabic {
+  font-family: 'Amiri', 'Noto Naskh Arabic', serif;
+}
+
+/* Subtle islamic geometric watermark with royal blue / gold tones */
+.bg-islamic-pattern {
+  background-image: radial-gradient(circle at 1px 1px, rgba(11, 48, 149, 0.06) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.bg-islamic-pattern-dark {
+  background-image: radial-gradient(circle at 1px 1px, rgba(197, 161, 90, 0.12) 1px, transparent 0);
+  background-size: 28px 28px;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F9FF;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Smooth motion utilities */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
