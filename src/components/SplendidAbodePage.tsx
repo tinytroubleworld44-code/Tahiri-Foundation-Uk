@@ -126,7 +126,7 @@ export const SplendidAbodePage: React.FC<SplendidAbodePageProps> = ({
             transition={{ duration: 0.6, delay: 0.25 }}
             className="text-xs sm:text-sm text-white/85 max-w-2xl mx-auto leading-relaxed font-light"
           >
-            The phrase <strong>“جلوہ گاہِ دوست”</strong> translates to{' '}
+            The phrase <strong>“جلوہ گاہِ دوست”</strong> may be rendered poetically as{' '}
             <strong>“The Splendid Abode of the Friend”</strong> and carries a profound Sufi
             connotation referring to experiencing the spiritual presence, beauty, and intimacy of the
             Divine through sacred knowledge and righteous emulation of the Sunnah.

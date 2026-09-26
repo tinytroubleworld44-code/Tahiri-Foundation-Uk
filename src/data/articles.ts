@@ -36,7 +36,7 @@ export const ARTICLES: Article[] = [
   },
   {
     id: 'need-for-sufism',
-    title: 'The Need for Sufism (Tassawuf)',
+    title: 'The Need for Sufism (Tasawwuf)',
     category: 'Foundations of Sufism',
     categorySlug: 'foundations-of-sufism',
     subtitle: 'Why the purification of the heart is an absolute obligation upon every Muslim',
@@ -77,7 +77,7 @@ export const ARTICLES: Article[] = [
     subtitle: 'Why an experienced spiritual physician is essential for traversing the inner path',
     arabicTitle: 'ضَرُورَةُ الْمُرْشِدِ الْكَامِلِ',
     readTime: '7 min read',
-    summary: 'The necessity of taking guidance from an authentic Sheikh whose heart is connected with the prophetic lineage to cure the subtle deceits of the ego.',
+    summary: 'The necessity of taking guidance from an authentic Shaykh whose heart is connected with the prophetic lineage to cure the subtle deceits of the ego.',
     sections: [
       {
         heading: 'The Analogy of the Spiritual Physician',
@@ -93,7 +93,7 @@ export const ARTICLES: Article[] = [
         paragraphs: [
           'The Holy Qur’an commands believers not only to fear Allah, but to remain in the constant companionship of the "Sadiqin" (the truthful ones). The Murshid Kamil is one whose very presence instills remembrance of Allah, whose words impart spiritual wisdom, and whose spiritual focus (Tawajjuh) cleanses the hearts of his companions.'
         ],
-        keyQuote: 'The Sheikh does not stand between the servant and Allah; rather, he is the guide who removes the obstacles standing between the servant and his Lord.'
+        keyQuote: 'The Shaykh does not stand between the servant and Allah; rather, he is the guide who removes the obstacles standing between the servant and his Lord.'
       }
     ],
     relatedArticleIds: ['signs-of-a-perfect-guide', 'key-signs-of-a-spiritual-guide', 'pledge-of-allegiance']
@@ -127,21 +127,21 @@ export const ARTICLES: Article[] = [
   },
   {
     id: 'key-signs-of-a-spiritual-guide',
-    title: 'Key Signs of a Perfect Spiritual Guide (Sheikh)',
+    title: 'Key Signs of a Perfect Spiritual Guide (Shaykh)',
     category: 'Foundations of Sufism',
     categorySlug: 'foundations-of-sufism',
     subtitle: 'A focused summary of the vital markers of true spiritual guardianship',
     arabicTitle: 'أَبْرَزُ عَلَامَاتِ الشَّيْخِ الْمُرْشِدِ',
     readTime: '6 min read',
-    summary: 'A direct synthesis of the core traits of an authorized Sheikh: piety, modesty, wisdom, and transformative spiritual presence.',
+    summary: 'A direct synthesis of the core traits of an authorized Shaykh: piety, modesty, wisdom, and transformative spiritual presence.',
     sections: [
       {
         heading: 'The Test of Spiritual Fruit',
         paragraphs: [
-          'The authentic Sheikh is identified by the spiritual transformation observed in his disciples. Under his guidance, thieves repent, the heedless awaken to Tahajjud prayers, arrogance softens into humility, and family ties are restored.',
-          'He demands nothing for himself. When you sit in his gathering, you are not impressed by him, but humbled before the majesty of Allah. His heart acts as a polished mirror receiving and reflecting Divine Faiz.'
+          'The authentic Shaykh is identified by the spiritual transformation observed in his disciples. Under his guidance, thieves repent, the heedless awaken to Tahajjud prayers, arrogance softens into humility, and family ties are restored.',
+          'He demands nothing for himself. When you sit in his gathering, you are not impressed by him, but humbled before the majesty of Allah. His heart acts as a polished mirror receiving and reflecting Divine Faiz.',
         ],
-        keyQuote: 'The true Sheikh is he whose sight reminds you of Allah, whose speech increases your knowledge, and whose action reminds you of the Hereafter.'
+        keyQuote: 'The true Shaykh is he whose sight reminds you of Allah, whose speech increases your knowledge, and whose action reminds you of the Hereafter.'
       }
     ],
     relatedArticleIds: ['signs-of-a-perfect-guide', 'pledge-of-allegiance', 'teachings-of-naqshbandi-sheikhs']
@@ -176,7 +176,7 @@ export const ARTICLES: Article[] = [
   },
   {
     id: 'teachings-of-naqshbandi-sheikhs',
-    title: 'Teachings of the Naqshbandi Sheikhs',
+    title: 'Teachings of the Naqshbandi Shaykhs',
     category: 'Foundations of Sufism',
     categorySlug: 'foundations-of-sufism',
     subtitle: 'Core counsels of the venerable masters regarding worship, livelihood, and conduct',
@@ -221,7 +221,7 @@ export const ARTICLES: Article[] = [
   },
   {
     id: 'companionship-of-a-sheikh',
-    title: 'The Companionship of a Sheikh',
+    title: 'The Companionship of a Shaykh',
     category: 'Foundations of Sufism',
     categorySlug: 'foundations-of-sufism',
     subtitle: 'How the physical and spiritual presence of a righteous master transforms the seeker',
@@ -326,7 +326,7 @@ export const ARTICLES: Article[] = [
   },
   {
     id: 'dhikr-meditation-circles',
-    title: 'Dhikr & Meditation Circles',
+    title: 'Circles of Dhikr & Muraqabah',
     category: 'Dhikr & Spiritual Practice',
     categorySlug: 'dhikr-and-spiritual-practice',
     subtitle: 'The etiquette, spiritual power, and collective grace of gathering for Muraqabah and remembrance',
@@ -378,7 +378,7 @@ export const ARTICLES: Article[] = [
     subtitle: 'Watching Your Step — Lowering the physical gaze and guarding the spiritual intention',
     arabicTitle: 'نَظَر بَرْ قَدَمْ (حِفْظُ الْبَصَرِ وَالْخُطُوَاتِ)',
     readTime: '6 min read',
-    summary: 'The second principle: keeping the eyes cast down toward the toes while walking to shield the mind from illicit glances and idle curiosity.',
+    summary: 'The second principle: remaining attentive to one’s steps, direction, and spiritual purpose while walking to shield the mind from illicit glances and idle curiosity.',
     sections: [
       {
         heading: 'Guarding the Window of the Soul',
@@ -444,12 +444,12 @@ export const ARTICLES: Article[] = [
     subtitle: 'Continuous Remembrance — Incessant repetition of the Divine Name in the heart',
     arabicTitle: 'يَادْ كَرْدْ (مُدَاوَمَةُ الذِّكْرِ)',
     readTime: '6 min read',
-    summary: 'The fourth principle: holding the tongue of the heart in continuous engagement with the affirmation of the negation and the affirmation of Allah.',
+    summary: 'The fourth principle: keeping the heart engaged in continuous, rhythmic invocation of the Divine Name until remembrance becomes effortless and perpetual.',
     sections: [
       {
         heading: 'Perpetual Awakening',
         paragraphs: [
-          'Yad Kard is the diligent, rhythmic invocation taught by the Sheikh. Through persistent repetition, the remembrance moves from an effort of will to an effortless reflex, until every heartbeat reverberates with the Divine Name without conscious labor.'
+          'Yad Kard is the diligent, rhythmic invocation taught by the Shaykh. Through persistent repetition, the remembrance moves from an effort of will to an effortless reflex, until every heartbeat reverberates with the Divine Name without conscious labor.'
         ]
       }
     ],
@@ -505,7 +505,7 @@ export const ARTICLES: Article[] = [
     subtitle: 'Recollection — Perpetual, unmediated witnessing of the Divine Presence',
     arabicTitle: 'يَادْ دَاشْتْ (دَوَامُ شُهُودِ الْحَضْرَةِ)',
     readTime: '8 min read',
-    summary: 'The seventh principle: reaching the supreme station where the remembrance becomes an effortless, continuous witnessing of Allah without separation.',
+    summary: 'The seventh principle: maintaining constant, effortless awareness of the Divine Presence, where the heart abides in perpetual remembrance without distraction.',
     sections: [
       {
         heading: 'From Effort to Abiding Presence',
@@ -524,7 +524,7 @@ export const ARTICLES: Article[] = [
     subtitle: 'Temporal Awareness — Taking regular accounting of one’s hours and moments',
     arabicTitle: 'وُقُوفْ زَمَانِي (مُحَاسَبَةُ الْوَقْتِ)',
     readTime: '6 min read',
-    summary: 'The eighth principle (added by Shah Naqshband): regularly auditing whether the past two or three hours were spent in gratitude or heedlessness.',
+    summary: 'The ninth principle (added by Shah Naqshband): regularly auditing whether the past two or three hours were spent in gratitude or heedlessness.',
     sections: [
       {
         heading: 'The Spiritual Balance Sheet',
@@ -707,7 +707,7 @@ export const ARTICLES: Article[] = [
       {
         heading: 'The Conduit of Prophetic Faiz',
         paragraphs: [
-          'Rabitah is not worship of the master; it is love, reverence, and spiritual tuning. Just as a television antenna must be aligned precisely with the broadcasting tower to receive the signal, the seeker’s heart aligns with the heart of the Sheikh to receive the spiritual transmission originating from the Holy Prophet (S.A.W.).'
+          'Rabitah is not worship of the master; it is love, reverence, and spiritual tuning. Just as a television antenna must be aligned precisely with the broadcasting tower to receive the signal, the seeker’s heart aligns with the heart of the Shaykh to receive the spiritual transmission originating from the Holy Prophet (S.A.W.).'
         ]
       }
     ],
@@ -873,7 +873,7 @@ export const ARTICLES: Article[] = [
   },
   {
     id: 'attributes-of-beloveds-beloved',
-    title: 'The Attributes of the Beloved’s Beloved',
+    title: 'The Noble Characteristics of the Beloved Mustafa',
     category: 'Maktubat Shareef',
     categorySlug: 'maktubat-shareef',
     subtitle: 'Reflections on the sublime prophetic character that illuminated humanity',
@@ -981,7 +981,7 @@ export const ARTICLES: Article[] = [
       {
         heading: 'Direct Heart-to-Heart Alchemy',
         paragraphs: [
-          'Imam Rabbani notes that when an untrained seeker attempts extreme solitary fasts, their ego secretly congratulates them on being righteous. In the companionship of the master, the ego is starved of admiration and directly cleansed by the Sheikh’s Tawajjuh.'
+          'Imam Rabbani notes that when an untrained seeker attempts extreme solitary fasts, their ego secretly congratulates them on being righteous. In the companionship of the master, the ego is starved of admiration and directly cleansed by the Shaykh’s Tawajjuh.'
         ]
       }
     ],
@@ -1175,7 +1175,7 @@ export const ARTICLES: Article[] = [
   },
   {
     id: 'connection-with-sheikh',
-    title: 'Connection with the Sheikh',
+    title: 'Connection with the Shaykh',
     category: 'Lessons & Guidance',
     categorySlug: 'lessons-and-guidance',
     subtitle: 'Maintaining constant inner communication and seeking spiritual focus from the master',
@@ -1186,7 +1186,7 @@ export const ARTICLES: Article[] = [
       {
         heading: 'The Unbroken Spiritual Ray',
         paragraphs: [
-          'A true disciple does not restrict their connection to physical visits. In prayer, in hardship, and in spiritual practice, they remember their master, visualizing their heart receiving Faiz from the Sheikh’s heart, which in turn receives from the Prophet (S.A.W.).'
+          'A true disciple does not restrict their connection to physical visits. In prayer, in hardship, and in spiritual practice, they remember their master, visualizing their heart receiving Faiz from the Shaykh’s heart, which in turn receives from the Prophet (S.A.W.).'
         ]
       }
     ],

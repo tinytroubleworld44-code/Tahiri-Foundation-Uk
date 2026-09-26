@@ -31,7 +31,7 @@ export const CATEGORIES: CategoryInfo[] = [
     title: 'Maktubat Shareef',
     arabicTitle: 'مَكْتُوبَاتٌ شَرِيفَةٌ',
     description: 'Timeless spiritual counsels, epistles, and theological discourses from Imam Rabbani Mujaddid Alf Thani and the Naqshbandi masters on Shari’ah and Tariqah.',
-    articleCount: 28,
+    articleCount: 29,
   },
   {
     id: 'lessons',
