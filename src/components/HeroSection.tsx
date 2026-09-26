@@ -18,7 +18,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
       <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#EEF3FF] rounded-full blur-3xl pointer-events-none" />
       <div className="absolute top-1/3 -right-32 w-96 h-96 bg-[#0B3095]/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      <div className="desktop-container max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 md:gap-10 lg:gap-14 items-center">
           
           {/* Left Column: Typography & Sacred Tagline with Staggered Motion */}
@@ -71,7 +71,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
-              className="border-l-0 lg:border-l-2 border-[#C5A15A] pl-0 lg:pl-4 py-1 text-xs sm:text-sm md:text-base leading-relaxed text-[#111827]/90 font-serif-display italic bg-[#F7F9FF] lg:bg-transparent rounded-xl lg:rounded-none p-2.5 sm:p-4 lg:p-0 border border-[#E4E9F2] lg:border-t-0 lg:border-r-0 lg:border-b-0 text-left"
+              className="border-l-0 lg:border-l-2 border-[#C5A15A] pl-0 lg:pl-4 py-1 text-xs sm:text-sm md:text-base lg:text-[17px] leading-relaxed text-[#111827]/90 font-serif-display italic bg-[#F7F9FF] lg:bg-transparent rounded-xl lg:rounded-none p-2.5 sm:p-4 lg:p-0 border border-[#E4E9F2] lg:border-t-0 lg:border-r-0 lg:border-b-0 text-left"
             >
               “The Annual Urs Mubarak of Huzoor Sohna Saeen (Allah Almighty’s blessings be upon him) is an occasion filled with Faiz and blessings, which are hard to describe in words, however they need to be felt, one who goes once, wants to keep going.”
             </motion.blockquote>
@@ -80,7 +80,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.45 }}
-              className="text-xs sm:text-sm text-[#5B6472] max-w-xl mx-auto lg:mx-0 leading-relaxed"
+              className="text-xs sm:text-sm lg:text-[16px] text-[#5B6472] max-w-xl mx-auto lg:mx-0 leading-relaxed"
             >
               Illuminating hearts through adherence to the pristine Sunnah, silent heart remembrance (Zikr-e-Qalbi), and the sacred treatises preserved in <em>The Splendid Abode of the Friend</em>.
             </motion.p>

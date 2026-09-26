@@ -26,7 +26,7 @@ export const ShajraFeatureSection: React.FC<ShajraFeatureSectionProps> = ({ onNa
       {/* Extremely subtle Islamic geometric background pattern */}
       <div className="absolute inset-0 bg-islamic-pattern opacity-30 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="desktop-container max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Composition */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 md:gap-10 lg:gap-14 items-center">
@@ -52,7 +52,7 @@ export const ShajraFeatureSection: React.FC<ShajraFeatureSectionProps> = ({ onNa
             >
               <h2
                 id="shajra-feature-heading"
-                className="font-serif-display text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0B3095] leading-[1.18]"
+                className="font-serif-display text-xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-[#0B3095] leading-[1.18]"
               >
                 Shajra Shareef
               </h2>
@@ -64,13 +64,13 @@ export const ShajraFeatureSection: React.FC<ShajraFeatureSectionProps> = ({ onNa
             {/* Tiny Heritage Gold Divider */}
             <div className="w-12 sm:w-14 h-[2px] bg-[#C5A15A]" />
 
-            {/* Manuscript-inspired Official Introductory Box - Compact */}
+            {/* Manuscript-inspired Official Introductory Box */}
             <motion.div
               initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.15 }}
-              className="p-3.5 sm:p-4 md:p-5 rounded-xl sm:rounded-2xl bg-[#F7F9FF] border border-[#E4E9F2] space-y-2 sm:space-y-2.5 shadow-xs"
+              className="p-3.5 sm:p-4 md:p-5 lg:p-6 rounded-xl sm:rounded-2xl bg-[#F7F9FF] border border-[#E4E9F2] space-y-2 sm:space-y-2.5 shadow-xs"
             >
               <div className="flex items-center gap-1.5 sm:gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#C5A15A]" />
@@ -78,10 +78,10 @@ export const ShajraFeatureSection: React.FC<ShajraFeatureSectionProps> = ({ onNa
                   Official Lineage Introduction
                 </span>
               </div>
-              <p className="text-xs sm:text-sm font-serif-display text-[#111827] leading-relaxed italic">
+              <p className="text-xs sm:text-sm lg:text-[15px] font-serif-display text-[#111827] leading-relaxed italic">
                 “{SHAJRA_INTRO}”
               </p>
-              <div className="text-[10px] sm:text-[11px] text-[#5B6472] space-y-0.5 pt-1.5 border-t border-[#E4E9F2]">
+              <div className="text-[10px] sm:text-[11px] lg:text-xs text-[#5B6472] space-y-0.5 pt-1.5 border-t border-[#E4E9F2]">
                 <p>
                   Author: <strong className="text-[#0B3095]">{SHAJRA_AUTHOR}</strong>
                 </p>
@@ -96,7 +96,7 @@ export const ShajraFeatureSection: React.FC<ShajraFeatureSectionProps> = ({ onNa
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-xs sm:text-sm md:text-base text-[#5B6472] leading-relaxed"
+              className="text-xs sm:text-sm md:text-base lg:text-[16px] text-[#5B6472] leading-relaxed"
             >
               The 41-link Shajra Shareef preserves the spiritual lineage of the Naqshbandi Mujaddidi Tahiri tradition.
             </motion.p>

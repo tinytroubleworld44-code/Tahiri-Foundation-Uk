@@ -62,6 +62,41 @@
   background: #94A3B8;
 }
 
+/* ==================================================
+   DESKTOP-ONLY CORRECTIONS (min-width: 1025px)
+   Does NOT modify tablet (768px-1024px) or mobile (320px-767px)
+   ================================================== */
+@media (min-width: 1025px) {
+  /* Controlled desktop container (1180px–1240px) */
+  .desktop-container {
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* 3-column desktop layout for principles, heritage & pillars */
+  .desktop-grid-3 {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+
+  .desktop-col-span-1 {
+    grid-column: span 1 / span 1 !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* Desktop navigation visibility */
+  .desktop-nav-show {
+    display: flex !important;
+  }
+
+  .desktop-nav-hide {
+    display: none !important;
+  }
+}
+
 /* Smooth motion utilities */
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {

@@ -43,7 +43,7 @@ export const ThreeCorePrinciplesSection: React.FC<ThreeCorePrinciplesProps> = ({
       id="homepage-principles-section"
       className="py-10 sm:py-14 md:py-18 lg:py-24 bg-[#F7F9FF] text-[#111827] relative border-b border-[#E4E9F2]"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="desktop-container max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header with Responsive Typography & Spacing */}
         <div className="max-w-3xl mx-auto text-center space-y-2.5 sm:space-y-4">
@@ -63,7 +63,7 @@ export const ThreeCorePrinciplesSection: React.FC<ThreeCorePrinciplesProps> = ({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-serif-display text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0B3095] leading-tight"
+            className="font-serif-display text-xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-[#0B3095] leading-tight"
           >
             Three Foundational Principles
           </motion.h2>
@@ -75,15 +75,15 @@ export const ThreeCorePrinciplesSection: React.FC<ThreeCorePrinciplesProps> = ({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-xs sm:text-sm md:text-base text-[#5B6472] leading-relaxed max-w-2xl mx-auto"
+            className="text-xs sm:text-sm md:text-base lg:text-[16px] text-[#5B6472] leading-relaxed max-w-2xl mx-auto"
           >
             The following principles reflect key themes of the Naqshbandi Mujaddidi Tahiri tradition,
             guiding the seeker toward inner peace, moral excellence, and Divine remembrance.
           </motion.p>
         </div>
 
-        {/* Responsive Grid: Mobile 1-col, Tablet 2-col balanced, Desktop (>=1025px) 3-col */}
-        <div className="mt-6 sm:mt-10 md:mt-12 lg:mt-16 grid grid-cols-1 md:grid-cols-2 min-[1025px]:grid-cols-3 gap-3 sm:gap-5 lg:gap-8">
+        {/* Responsive Grid: Mobile 1-col, Tablet 2-col balanced, Desktop (>=1025px) 3-col ONE ROW */}
+        <div className="mt-6 sm:mt-10 md:mt-12 lg:mt-16 grid grid-cols-1 md:grid-cols-2 desktop-grid-3 gap-3 sm:gap-5 lg:gap-8">
           {principles.map((item, idx) => {
             const IconComponent = item.icon;
             const isThirdCard = idx === 2;
@@ -101,14 +101,14 @@ export const ThreeCorePrinciplesSection: React.FC<ThreeCorePrinciplesProps> = ({
                 }}
                 className={`group relative bg-white p-3.5 sm:p-5 lg:p-7 rounded-xl sm:rounded-2xl border border-[#E4E9F2] hover:border-[#0B3095]/40 hover:-translate-y-1 shadow-xs hover:shadow-md transition-all duration-300 ease-out flex flex-col justify-between ${
                   isThirdCard
-                    ? 'md:col-span-2 md:max-w-md md:mx-auto min-[1025px]:col-span-1 min-[1025px]:max-w-none w-full'
+                    ? 'md:col-span-2 md:max-w-md md:mx-auto desktop-col-span-1 w-full'
                     : 'w-full'
                 }`}
               >
                 <div className="space-y-2 sm:space-y-3">
                   {/* Top Bar: Large Number + Icon */}
                   <div className="flex items-center justify-between pb-1.5 sm:pb-2 border-b border-[#E4E9F2]">
-                    <span className="font-serif-display text-xl sm:text-3xl font-bold text-[#0B3095]/35 group-hover:text-[#0B3095] group-hover:translate-x-0.5 transition-all duration-300">
+                    <span className="font-serif-display text-xl sm:text-3xl lg:text-4xl font-bold text-[#0B3095]/35 group-hover:text-[#0B3095] group-hover:translate-x-0.5 transition-all duration-300">
                       {item.number}
                     </span>
                     <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-[#F7F9FF] border border-[#E4E9F2] flex items-center justify-center text-[#0B3095] group-hover:bg-[#0B3095] group-hover:text-white transition-colors duration-300">
@@ -118,10 +118,10 @@ export const ThreeCorePrinciplesSection: React.FC<ThreeCorePrinciplesProps> = ({
 
                   {/* Title & Arabic */}
                   <div className="space-y-0.5">
-                    <h3 className="font-serif-display text-base sm:text-lg lg:text-xl font-bold text-[#111827] group-hover:text-[#0B3095] transition-colors duration-200">
+                    <h3 className="font-serif-display text-base sm:text-lg lg:text-[22px] font-bold text-[#111827] group-hover:text-[#0B3095] transition-colors duration-200">
                       {item.title}
                     </h3>
-                    <p className="font-arabic text-xs sm:text-sm text-[#0B3095]/75 font-normal">
+                    <p className="font-arabic text-xs sm:text-sm lg:text-base text-[#0B3095]/75 font-normal">
                       {item.arabic}
                     </p>
                   </div>
@@ -130,7 +130,7 @@ export const ThreeCorePrinciplesSection: React.FC<ThreeCorePrinciplesProps> = ({
                   <div className="w-6 sm:w-7 h-[1.5px] bg-[#C5A15A] group-hover:w-12 transition-all duration-300" />
 
                   {/* Concise Description */}
-                  <p className="text-xs sm:text-sm text-[#5B6472] leading-relaxed">
+                  <p className="text-xs sm:text-sm lg:text-[15px] lg:leading-relaxed text-[#5B6472]">
                     {item.description}
                   </p>
                 </div>
@@ -140,7 +140,7 @@ export const ThreeCorePrinciplesSection: React.FC<ThreeCorePrinciplesProps> = ({
                   {onNavigate ? (
                     <button
                       onClick={() => onNavigate(item.page)}
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0B3095] group-hover:text-[#1746B8] group-hover:translate-x-0.5 transition-all py-0.5"
+                      className="inline-flex items-center gap-1.5 text-xs lg:text-sm font-semibold text-[#0B3095] group-hover:text-[#1746B8] group-hover:translate-x-0.5 transition-all py-0.5"
                     >
                       <span>{item.linkText}</span>
                       <ArrowRight className="w-3.5 h-3.5 text-[#C5A15A]" aria-hidden="true" focusable="false" />

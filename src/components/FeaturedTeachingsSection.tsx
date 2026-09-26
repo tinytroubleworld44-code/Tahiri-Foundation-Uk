@@ -66,7 +66,7 @@ export const FeaturedTeachingsSection: React.FC<FeaturedTeachingsSectionProps> =
       id="homepage-featured-teachings-section"
       className="py-10 sm:py-14 md:py-18 lg:py-24 bg-white text-[#111827] relative border-b border-[#E4E9F2]"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="desktop-container max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-2.5 sm:space-y-4">
@@ -86,7 +86,7 @@ export const FeaturedTeachingsSection: React.FC<FeaturedTeachingsSectionProps> =
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-serif-display text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0B3095] leading-tight"
+            className="font-serif-display text-xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-[#0B3095] leading-tight"
           >
             Core Spiritual Teachings
           </motion.h2>
@@ -98,7 +98,7 @@ export const FeaturedTeachingsSection: React.FC<FeaturedTeachingsSectionProps> =
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xs sm:text-sm md:text-base text-[#5B6472] leading-relaxed max-w-2xl mx-auto"
+            className="text-xs sm:text-sm md:text-base lg:text-[16px] text-[#5B6472] leading-relaxed max-w-2xl mx-auto"
           >
             Selected foundational essays from <em>The Splendid Abode of the Friend</em> addressing
             the essential inner disciplines of the sincere seeker.
@@ -130,7 +130,7 @@ export const FeaturedTeachingsSection: React.FC<FeaturedTeachingsSectionProps> =
                 </div>
 
                 {/* Title */}
-                <h3 className="font-serif-display text-base sm:text-lg lg:text-xl font-bold text-[#0B3095] group-hover:text-[#1746B8] transition-colors leading-snug">
+                <h3 className="font-serif-display text-base sm:text-lg lg:text-[21px] font-bold text-[#0B3095] group-hover:text-[#1746B8] transition-colors leading-snug">
                   {item.title}
                 </h3>
 
@@ -138,7 +138,7 @@ export const FeaturedTeachingsSection: React.FC<FeaturedTeachingsSectionProps> =
                 <div className="w-7 group-hover:w-14 h-[1.5px] sm:h-[2px] bg-[#C5A15A] transition-all duration-300" />
 
                 {/* Excerpt */}
-                <p className="text-xs sm:text-sm text-[#5B6472] leading-relaxed line-clamp-3">
+                <p className="text-xs sm:text-sm lg:text-[15px] text-[#5B6472] leading-relaxed line-clamp-3">
                   {item.excerpt}
                 </p>
               </div>

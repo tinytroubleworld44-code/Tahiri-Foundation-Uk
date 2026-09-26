@@ -19,7 +19,7 @@ export const SplendidAbodeFeatureSection: React.FC<SplendidAbodeFeatureSectionPr
       {/* Subtle Islamic pattern */}
       <div className="absolute inset-0 bg-islamic-pattern opacity-40 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="desktop-container max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-2.5 sm:space-y-4">
@@ -43,7 +43,7 @@ export const SplendidAbodeFeatureSection: React.FC<SplendidAbodeFeatureSectionPr
           >
             <h2
               id="abode-feature-heading"
-              className="font-serif-display text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0B3095] leading-tight"
+              className="font-serif-display text-xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-[#0B3095] leading-tight"
             >
               The Splendid Abode of the Friend
             </h2>
@@ -59,7 +59,7 @@ export const SplendidAbodeFeatureSection: React.FC<SplendidAbodeFeatureSectionPr
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xs sm:text-sm md:text-base text-[#5B6472] leading-relaxed max-w-2xl mx-auto"
+            className="text-xs sm:text-sm md:text-base lg:text-[16px] text-[#5B6472] leading-relaxed max-w-2xl mx-auto"
           >
             A repository of classical spiritual treatises, letters (Maktubat), and practical
             discourses compiled for earnest seekers traversing the Naqshbandi Mujaddidi path.
@@ -90,7 +90,7 @@ export const SplendidAbodeFeatureSection: React.FC<SplendidAbodeFeatureSectionPr
                 </div>
 
                 {/* Category Title */}
-                <h3 className="font-serif-display text-base sm:text-lg lg:text-xl font-bold text-[#0B3095] group-hover:text-[#1746B8] transition-colors leading-snug">
+                <h3 className="font-serif-display text-base sm:text-lg lg:text-[21px] font-bold text-[#0B3095] group-hover:text-[#1746B8] transition-colors leading-snug">
                   {cat.title}
                 </h3>
 
@@ -98,7 +98,7 @@ export const SplendidAbodeFeatureSection: React.FC<SplendidAbodeFeatureSectionPr
                 <div className="w-7 sm:w-8 h-[1.5px] bg-[#C5A15A]" />
 
                 {/* Description */}
-                <p className="text-xs sm:text-sm text-[#5B6472] leading-relaxed line-clamp-3">
+                <p className="text-xs sm:text-sm lg:text-[15px] text-[#5B6472] leading-relaxed line-clamp-3">
                   {cat.description}
                 </p>
               </div>

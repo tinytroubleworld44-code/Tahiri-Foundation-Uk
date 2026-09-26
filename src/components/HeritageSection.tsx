@@ -13,7 +13,7 @@ export const HeritageSection: React.FC = () => {
       <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#1746B8] rounded-full blur-3xl pointer-events-none opacity-50" />
       <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[#061A4A] rounded-full blur-3xl pointer-events-none opacity-80" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="desktop-container max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header with Large Confident Statement */}
         <div className="max-w-3xl mx-auto text-center space-y-2.5 sm:space-y-4">
@@ -33,7 +33,7 @@ export const HeritageSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-serif-display text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight"
+            className="font-serif-display text-xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-white leading-tight"
           >
             Spiritual Heritage. Sacred Knowledge. Living Tradition.
           </motion.h2>
@@ -45,15 +45,15 @@ export const HeritageSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-xs sm:text-sm md:text-base text-white/80 leading-relaxed max-w-2xl mx-auto"
+            className="text-xs sm:text-sm md:text-base lg:text-[16px] text-white/80 leading-relaxed max-w-2xl mx-auto"
           >
             A luminous lineage bridging the earliest generation of Islam with contemporary seekers
             of peace, spiritual purification, and intimate Divine presence.
           </motion.p>
         </div>
 
-        {/* Narrative Flow / Three Foundations: Balanced 2-col on Tablet, 1-col on Mobile */}
-        <div className="mt-6 sm:mt-10 md:mt-12 lg:mt-16 grid grid-cols-1 md:grid-cols-2 min-[1025px]:grid-cols-3 gap-3 sm:gap-5 lg:gap-8">
+        {/* Narrative Flow / Three Foundations: Balanced 2-col on Tablet, 1-col on Mobile, 3-col ONE ROW on Desktop */}
+        <div className="mt-6 sm:mt-10 md:mt-12 lg:mt-16 grid grid-cols-1 md:grid-cols-2 desktop-grid-3 gap-3 sm:gap-5 lg:gap-8">
           
           {/* Station 1: The Siddiqi Origin */}
           <motion.div
@@ -63,13 +63,13 @@ export const HeritageSection: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
             className="relative p-3.5 sm:p-5 lg:p-7 rounded-xl sm:rounded-2xl bg-[#061A4A]/70 border border-white/15 backdrop-blur-xs space-y-1.5 sm:space-y-3 hover:border-[#C5A15A]/60 hover:-translate-y-1 transition-all duration-300 ease-out"
           >
-            <span className="font-serif-display text-lg sm:text-2xl font-bold text-[#C5A15A] block">
+            <span className="font-serif-display text-lg sm:text-2xl lg:text-3xl font-bold text-[#C5A15A] block">
               ۰۱
             </span>
-            <h3 className="font-serif-display text-sm sm:text-lg lg:text-xl font-bold text-white">
+            <h3 className="font-serif-display text-sm sm:text-lg lg:text-[22px] font-bold text-white">
               The Siddiqi Origin
             </h3>
-            <p className="text-xs sm:text-sm text-white/80 leading-relaxed">
+            <p className="text-xs sm:text-sm lg:text-[15px] lg:leading-relaxed text-white/80">
               Traced back primarily to <strong>Hadhrat Abu Bakr as-Siddiq (R.A.)</strong>, who received
               the silent inward remembrance (Zikr-e-Khafi) from the Holy Prophet (S.A.W.) inside the Cave of Thawr.
               This sober way avoids noise and ostentation, establishing quiet intimacy between the servant and the Creator.
@@ -84,13 +84,13 @@ export const HeritageSection: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
             className="relative p-3.5 sm:p-5 lg:p-7 rounded-xl sm:rounded-2xl bg-[#061A4A]/70 border border-white/15 backdrop-blur-xs space-y-1.5 sm:space-y-3 hover:border-[#C5A15A]/60 hover:-translate-y-1 transition-all duration-300 ease-out"
           >
-            <span className="font-serif-display text-lg sm:text-2xl font-bold text-[#C5A15A] block">
+            <span className="font-serif-display text-lg sm:text-2xl lg:text-3xl font-bold text-[#C5A15A] block">
               ۰۲
             </span>
-            <h3 className="font-serif-display text-sm sm:text-lg lg:text-xl font-bold text-white">
+            <h3 className="font-serif-display text-sm sm:text-lg lg:text-[22px] font-bold text-white">
               The Mujaddidi Renewal
             </h3>
-            <p className="text-xs sm:text-sm text-white/80 leading-relaxed">
+            <p className="text-xs sm:text-sm lg:text-[15px] lg:leading-relaxed text-white/80">
               Revitalized at the dawn of the second Islamic millennium by <strong>Imam Rabbani Mujaddid Alf Thani</strong>{' '}
               (Shaikh Ahmad Sirhindi Rah.), who harmonized the inner states of Tariqah under the undisputed supremacy of Shari’ah,
               affirming that spiritual ecstasy without the Sunnah is a perilous illusion.
@@ -103,15 +103,15 @@ export const HeritageSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.24, ease: [0.22, 1, 0.36, 1] }}
-            className="relative p-3.5 sm:p-5 lg:p-7 rounded-xl sm:rounded-2xl bg-[#061A4A]/70 border border-white/15 backdrop-blur-xs space-y-1.5 sm:space-y-3 hover:border-[#C5A15A]/60 hover:-translate-y-1 transition-all duration-300 ease-out md:col-span-2 min-[1025px]:col-span-1 md:max-w-md md:mx-auto min-[1025px]:max-w-none w-full"
+            className="relative p-3.5 sm:p-5 lg:p-7 rounded-xl sm:rounded-2xl bg-[#061A4A]/70 border border-white/15 backdrop-blur-xs space-y-1.5 sm:space-y-3 hover:border-[#C5A15A]/60 hover:-translate-y-1 transition-all duration-300 ease-out md:col-span-2 md:max-w-md md:mx-auto desktop-col-span-1 w-full"
           >
-            <span className="font-serif-display text-lg sm:text-2xl font-bold text-[#C5A15A] block">
+            <span className="font-serif-display text-lg sm:text-2xl lg:text-3xl font-bold text-[#C5A15A] block">
               ۰۳
             </span>
-            <h3 className="font-serif-display text-sm sm:text-lg lg:text-xl font-bold text-white">
+            <h3 className="font-serif-display text-sm sm:text-lg lg:text-[22px] font-bold text-white">
               The Tahiri Heritage
             </h3>
-            <p className="text-xs sm:text-sm text-white/80 leading-relaxed">
+            <p className="text-xs sm:text-sm lg:text-[15px] lg:leading-relaxed text-white/80">
               Carried into modern times through <strong>Pir Mitha Saeen</strong> and <strong>Huzoor Sohna Saeen</strong>{' '}
               at Dargah Allahabad Sharif, and today nurtured by <strong>Mahboob Sajjan Saeen</strong>, making sacred
               contemplation and heart awakening accessible to seekers worldwide.
