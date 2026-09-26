@@ -57,15 +57,15 @@ export const ShajraPage: React.FC<ShajraPageProps> = ({ onNavigate }) => {
       />
       
       {/* Page Header Hero in Royal Blue */}
-      <section className="bg-gradient-to-b from-[#061A4A] to-[#0B3095] text-white py-16 lg:py-20 relative overflow-hidden border-b border-[#0B3095]">
+      <section className="bg-gradient-to-b from-[#061A4A] to-[#0B3095] text-white py-10 sm:py-16 lg:py-20 relative overflow-hidden border-b border-[#0B3095]">
         <div className="absolute inset-0 bg-islamic-pattern-dark opacity-15 pointer-events-none" />
         
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-4">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-3 sm:space-y-4">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/20 bg-white/10 text-xs text-[#C5A15A] uppercase tracking-wider font-semibold backdrop-blur-xs"
+            className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full border border-white/20 bg-white/10 text-[10px] sm:text-xs text-[#C5A15A] uppercase tracking-wider font-semibold backdrop-blur-xs"
           >
             <Compass className="w-3.5 h-3.5" />
             <span>Spiritual Lineage of the Masters</span>
@@ -76,7 +76,7 @@ export const ShajraPage: React.FC<ShajraPageProps> = ({ onNavigate }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-serif-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white"
+            className="font-serif-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white"
           >
             Shajra Shareef
           </motion.h1>
@@ -85,7 +85,7 @@ export const ShajraPage: React.FC<ShajraPageProps> = ({ onNavigate }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="font-arabic text-2xl sm:text-3xl text-white/90 dir-rtl font-normal"
+            className="font-arabic text-lg sm:text-2xl md:text-3xl text-white/90 dir-rtl font-normal"
           >
             شَجَرَہ شَرِيف سِلْسِلَہ عَالِيَہ نَقْشَبَنْدِيَہ مُجَدِّدِيَہ طَاهِرِيَہ
           </motion.p>
@@ -97,13 +97,13 @@ export const ShajraPage: React.FC<ShajraPageProps> = ({ onNavigate }) => {
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.25 }}
-            className="max-w-2xl mx-auto p-5 rounded-2xl bg-[#061A4A]/60 border border-[#C5A15A]/40 text-sm sm:text-base font-serif-display italic text-white/95 leading-relaxed shadow-sm"
+            className="max-w-2xl mx-auto p-3.5 sm:p-5 rounded-xl sm:rounded-2xl bg-[#061A4A]/60 border border-[#C5A15A]/40 text-xs sm:text-sm md:text-base font-serif-display italic text-white/95 leading-relaxed shadow-sm"
           >
             “{SHAJRA_INTRO}”
           </motion.div>
 
           {/* Author & Translator Attribution */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-xs text-white/90 pt-3">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-1.5 sm:gap-6 text-xs text-white/90 pt-1 sm:pt-3">
             <div className="flex items-center gap-1.5">
               <span className="text-white/70">Author:</span>
               <strong className="text-[#C5A15A] font-semibold">{SHAJRA_AUTHOR}</strong>
@@ -118,10 +118,10 @@ export const ShajraPage: React.FC<ShajraPageProps> = ({ onNavigate }) => {
       </section>
 
       {/* Main Content Container */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-6 sm:mt-10 lg:mt-12">
         
         {/* Search & Era Filter Controls */}
-        <div className="bg-[#F7F9FF] p-5 rounded-2xl border border-[#E4E9F2] shadow-xs flex flex-col gap-4 mb-12">
+        <div className="bg-[#F7F9FF] p-3.5 sm:p-5 rounded-xl sm:rounded-2xl border border-[#E4E9F2] shadow-xs flex flex-col gap-3 sm:gap-4 mb-6 sm:mb-10">
           
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             {/* Search Input */}
@@ -211,9 +211,9 @@ export const ShajraPage: React.FC<ShajraPageProps> = ({ onNavigate }) => {
           <div className="hidden md:block absolute left-1/2 top-4 bottom-4 -translate-x-1/2 w-[2px] bg-gradient-to-b from-[#0B3095] via-[#1746B8]/30 to-[#C5A15A]" />
           
           {/* Mobile Left-Hand Line */}
-          <div className="md:hidden absolute left-5 top-4 bottom-4 w-[2px] bg-[#E4E9F2]" />
+          <div className="md:hidden absolute left-4 top-4 bottom-4 w-[2px] bg-[#E4E9F2]" />
 
-          <div className="space-y-10 sm:space-y-12">
+          <div className="space-y-6 sm:space-y-10">
             {filteredNodes.map((node, index) => {
               const isEven = index % 2 === 0;
 
@@ -230,8 +230,8 @@ export const ShajraPage: React.FC<ShajraPageProps> = ({ onNavigate }) => {
                   } group`}
                 >
                   {/* Central Indicator Node with Royal Blue & Gold Ring */}
-                  <div className="absolute left-5 md:left-1/2 -translate-x-1/2 z-10 w-10 h-10 rounded-xl bg-[#0B3095] border-2 border-[#C5A15A] flex items-center justify-center text-white shadow-md group-hover:scale-105 group-hover:bg-[#1746B8] transition-all">
-                    <span className="font-serif-display text-xs font-bold">
+                  <div className="absolute left-4 md:left-1/2 -translate-x-1/2 z-10 w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-[#0B3095] border-2 border-[#C5A15A] flex items-center justify-center text-white shadow-md group-hover:scale-105 group-hover:bg-[#1746B8] transition-all">
+                    <span className="font-serif-display text-[10px] sm:text-xs font-bold">
                       {node.number}
                     </span>
                   </div>
@@ -241,19 +241,19 @@ export const ShajraPage: React.FC<ShajraPageProps> = ({ onNavigate }) => {
 
                   {/* Content Card */}
                   <div
-                    className={`pl-14 md:pl-0 w-full md:w-1/2 ${
+                    className={`pl-11 md:pl-0 w-full md:w-1/2 ${
                       isEven ? 'md:pr-10' : 'md:pl-10'
                     }`}
                   >
-                    <div className="p-6 sm:p-7 rounded-2xl bg-white border border-[#E4E9F2] shadow-xs hover:border-[#0B3095]/40 hover:shadow-md transition-all duration-300 relative space-y-2.5">
+                    <div className="p-3.5 sm:p-6 lg:p-7 rounded-xl sm:rounded-2xl bg-white border border-[#E4E9F2] shadow-xs hover:border-[#0B3095]/40 hover:shadow-md transition-all duration-300 relative space-y-2 sm:space-y-2.5">
                       
                       {/* 1. Station number */}
-                      <span className="text-[11px] font-bold text-[#C5A15A] tracking-wider uppercase block">
+                      <span className="text-[10px] sm:text-[11px] font-bold text-[#C5A15A] tracking-wider uppercase block">
                         Station #{node.number}
                       </span>
 
                       {/* 2. Master's English name */}
-                      <h3 className="font-serif-display text-xl sm:text-2xl font-bold text-[#0B3095] leading-snug">
+                      <h3 className="font-serif-display text-base sm:text-xl lg:text-2xl font-bold text-[#0B3095] leading-snug">
                         {node.name}
                       </h3>
 
@@ -299,24 +299,24 @@ export const ShajraPage: React.FC<ShajraPageProps> = ({ onNavigate }) => {
         </div>
 
         {/* Bottom Translator & Honorifics Explanatory Note */}
-        <div className="mt-20 p-8 rounded-2xl bg-[#F7F9FF] border border-[#E4E9F2] space-y-5 text-center max-w-3xl mx-auto">
+        <div className="mt-10 sm:mt-16 lg:mt-20 p-4 sm:p-6 lg:p-8 rounded-xl sm:rounded-2xl bg-[#F7F9FF] border border-[#E4E9F2] space-y-4 sm:space-y-5 text-center max-w-3xl mx-auto">
           <OrnamentalDivider accent="gold" />
           
           <div className="space-y-1">
-            <h4 className="font-serif-display text-lg font-bold text-[#0B3095]">
+            <h4 className="font-serif-display text-base sm:text-lg font-bold text-[#0B3095]">
               Authentication &amp; Translation Notice
             </h4>
-            <p className="text-sm text-[#5B6472]">
+            <p className="text-xs sm:text-sm text-[#5B6472]">
               Translated into English by: <strong className="text-[#0B3095]">{SHAJRA_TRANSLATOR}</strong>
             </p>
           </div>
 
           {/* Clean Explanatory Abbreviation Legend */}
-          <div className="p-4 sm:p-5 rounded-xl bg-white border border-[#E4E9F2] text-xs text-[#5B6472] leading-relaxed text-left space-y-2">
-            <h5 className="font-semibold text-[#0B3095] text-[11px] uppercase tracking-wider">
+          <div className="p-3 sm:p-5 rounded-xl bg-white border border-[#E4E9F2] text-xs text-[#5B6472] leading-relaxed text-left space-y-2">
+            <h5 className="font-semibold text-[#0B3095] text-[10px] sm:text-[11px] uppercase tracking-wider">
               Honorific Abbreviations Legend
             </h5>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs pt-1 border-t border-[#E4E9F2]/60">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-2 text-[11px] sm:text-xs pt-1 border-t border-[#E4E9F2]/60">
               <div><strong className="text-[#0B3095]">S.A.W. :</strong> Sallallahu Alayhi Wasallam (Peace and blessings of Allah be upon him)</div>
               <div><strong className="text-[#0B3095]">R.A. :</strong> Radi Allahu Ta&apos;ala Anhu (May Allah be pleased with him)</div>
               <div><strong className="text-[#0B3095]">Rah. :</strong> Rahmatullah Alayh (May Allah&apos;s mercy be upon him)</div>
@@ -324,7 +324,7 @@ export const ShajraPage: React.FC<ShajraPageProps> = ({ onNavigate }) => {
             </div>
           </div>
 
-          <p className="text-xs text-[#5B6472] italic">
+          <p className="text-[11px] sm:text-xs text-[#5B6472] italic">
             Preserved in exact chronological succession from the official archives of Tahiri Foundation UK &amp; Dargah Allahabad Sharif.
           </p>
         </div>

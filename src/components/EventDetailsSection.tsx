@@ -72,11 +72,11 @@ export const EventDetailsSection: React.FC<EventDetailsSectionProps> = ({
       </div>
 
       {/* Main Event Article Container */}
-      <div className="bg-white rounded-2xl border border-[#E4E9F2] shadow-sm overflow-hidden">
+      <div className="bg-white rounded-xl sm:rounded-2xl border border-[#E4E9F2] shadow-sm overflow-hidden">
         
         {/* Visual Hero Header */}
         {event.id === 'urs-mubarak-2026' ? (
-          <div className="relative h-64 sm:h-80 md:h-96 w-full overflow-hidden bg-[#061A4A]">
+          <div className="relative h-56 sm:h-72 md:h-96 w-full overflow-hidden bg-[#061A4A]">
             <img
               src={IMAGES.dargahAuthentic}
               alt="Dargah Allahabad Sharif, Sindh, Pakistan"
@@ -88,61 +88,61 @@ export const EventDetailsSection: React.FC<EventDetailsSectionProps> = ({
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#061A4A] via-[#061A4A]/50 to-transparent" />
             
-            <div className="absolute bottom-6 left-6 right-6 text-white max-w-4xl">
-              <div className="flex flex-wrap items-center gap-2.5 mb-3">
+            <div className="absolute bottom-3 left-3 right-3 sm:bottom-6 sm:left-6 sm:right-6 text-white max-w-4xl">
+              <div className="flex flex-wrap items-center gap-1.5 sm:gap-2.5 mb-2 sm:mb-3">
                 {status === 'ONGOING' ? (
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500 text-white shadow-xs">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full text-[11px] sm:text-xs font-semibold bg-emerald-500 text-white shadow-xs">
                     <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
                     Live / Currently Underway
                   </span>
                 ) : status === 'UPCOMING' ? (
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#C5A15A] text-white shadow-xs">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full text-[11px] sm:text-xs font-semibold bg-[#C5A15A] text-white shadow-xs">
                     <Sparkles className="w-3.5 h-3.5" />
                     Upcoming Annual Urs
                   </span>
                 ) : (
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-white/20 text-white">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full text-[11px] sm:text-xs font-semibold bg-white/20 text-white">
                     Past Event
                   </span>
                 )}
-                <span className="text-xs text-white/80 font-medium px-2.5 py-1 rounded-full bg-white/10">
+                <span className="text-[10px] sm:text-xs text-white/80 font-medium px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-white/10">
                   {event.timezoneLabel}
                 </span>
               </div>
 
-              <h1 className="font-serif-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight">
+              <h1 className="font-serif-display text-xl sm:text-3xl md:text-5xl font-bold tracking-tight text-white leading-tight">
                 {event.title}
               </h1>
-              <p className="text-lg sm:text-xl font-medium text-[#C5A15A] mt-1">
+              <p className="text-sm sm:text-lg font-medium text-[#C5A15A] mt-0.5 sm:mt-1">
                 {event.subtitle}
               </p>
             </div>
           </div>
         ) : (
-          <div className="p-6 sm:p-8 lg:p-10 border-b border-[#E4E9F2] bg-gradient-to-r from-[#F7F9FF] to-white">
-            <div className="flex flex-wrap items-center gap-2.5 mb-3">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#0B3095] text-white shadow-xs">
+          <div className="p-4 sm:p-8 lg:p-10 border-b border-[#E4E9F2] bg-gradient-to-r from-[#F7F9FF] to-white">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-2.5 mb-2 sm:mb-3">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full text-[11px] sm:text-xs font-semibold bg-[#0B3095] text-white shadow-xs">
                 {event.eventType === 'recurring' ? 'Recurring Program' : 'Special Event'}
               </span>
-              <span className="text-xs text-[#5B6472] font-medium px-2.5 py-1 rounded-full bg-[#E4E9F2]">
+              <span className="text-[10px] sm:text-xs text-[#5B6472] font-medium px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-[#E4E9F2]">
                 {event.timezoneLabel}
               </span>
             </div>
 
-            <h1 className="font-serif-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#0B3095] leading-tight">
+            <h1 className="font-serif-display text-xl sm:text-3xl md:text-5xl font-bold tracking-tight text-[#0B3095] leading-tight">
               {event.title}
             </h1>
-            <p className="text-lg sm:text-xl font-medium text-[#C5A15A] mt-1">
+            <p className="text-sm sm:text-lg font-medium text-[#C5A15A] mt-0.5 sm:mt-1">
               {event.subtitle}
             </p>
           </div>
         )}
 
         {/* Content Body */}
-        <div className="p-6 sm:p-8 lg:p-12 space-y-10">
+        <div className="p-4 sm:p-6 lg:p-12 space-y-6 sm:space-y-10">
           
           {/* Quick Info Bar */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 rounded-xl bg-[#F7F9FF] border border-[#E4E9F2]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 p-4 sm:p-6 rounded-xl bg-[#F7F9FF] border border-[#E4E9F2]">
             <div className="flex items-start gap-3.5">
               <div className="p-2.5 rounded-xl bg-white border border-[#E4E9F2] text-[#0B3095] shrink-0 shadow-2xs">
                 <Calendar className="w-5 h-5 text-[#0B3095]" />

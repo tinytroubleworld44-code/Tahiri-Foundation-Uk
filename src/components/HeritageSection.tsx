@@ -6,7 +6,7 @@ export const HeritageSection: React.FC = () => {
   return (
     <section
       id="homepage-heritage-section"
-      className="py-24 lg:py-32 bg-[#0B3095] text-white relative overflow-hidden"
+      className="py-10 sm:py-14 md:py-18 lg:py-24 bg-[#0B3095] text-white relative overflow-hidden"
     >
       {/* Ambient background styling & subtle geometric overlay */}
       <div className="absolute inset-0 bg-islamic-pattern-dark opacity-15 pointer-events-none" />
@@ -16,24 +16,24 @@ export const HeritageSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header with Large Confident Statement */}
-        <div className="max-w-3xl mx-auto text-center space-y-4">
+        <div className="max-w-3xl mx-auto text-center space-y-2.5 sm:space-y-4">
           <motion.span
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-xs font-semibold uppercase tracking-widest text-[#C5A15A] block"
+            transition={{ duration: 0.5 }}
+            className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-[#C5A15A] block"
           >
             Spiritual Genealogy &amp; Tradition
           </motion.span>
           
           <motion.h2
             id="heritage-heading"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-serif-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight"
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="font-serif-display text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight"
           >
             Spiritual Heritage. Sacred Knowledge. Living Tradition.
           </motion.h2>
@@ -41,32 +41,32 @@ export const HeritageSection: React.FC = () => {
           <OrnamentalDivider light accent="gold" />
 
           <motion.p
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-sm sm:text-base text-white/80 leading-relaxed max-w-2xl mx-auto"
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-xs sm:text-sm md:text-base text-white/80 leading-relaxed max-w-2xl mx-auto"
           >
             A luminous lineage bridging the earliest generation of Islam with contemporary seekers
             of peace, spiritual purification, and intimate Divine presence.
           </motion.p>
         </div>
 
-        {/* Narrative Flow / Three Foundations */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+        {/* Narrative Flow / Three Foundations: Balanced 2-col on Tablet, 1-col on Mobile */}
+        <div className="mt-6 sm:mt-10 md:mt-12 lg:mt-16 grid grid-cols-1 md:grid-cols-2 min-[1025px]:grid-cols-3 gap-3 sm:gap-5 lg:gap-8">
           
           {/* Station 1: The Siddiqi Origin */}
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-            className="relative p-8 rounded-2xl bg-[#061A4A]/70 border border-white/15 backdrop-blur-xs space-y-4 hover:border-[#C5A15A]/60 hover:-translate-y-1 transition-all duration-500 ease-out"
+            transition={{ duration: 0.5, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
+            className="relative p-3.5 sm:p-5 lg:p-7 rounded-xl sm:rounded-2xl bg-[#061A4A]/70 border border-white/15 backdrop-blur-xs space-y-1.5 sm:space-y-3 hover:border-[#C5A15A]/60 hover:-translate-y-1 transition-all duration-300 ease-out"
           >
-            <span className="font-serif-display text-3xl font-bold text-[#C5A15A] block">
+            <span className="font-serif-display text-lg sm:text-2xl font-bold text-[#C5A15A] block">
               ۰۱
             </span>
-            <h3 className="font-serif-display text-xl font-bold text-white">
+            <h3 className="font-serif-display text-sm sm:text-lg lg:text-xl font-bold text-white">
               The Siddiqi Origin
             </h3>
             <p className="text-xs sm:text-sm text-white/80 leading-relaxed">
@@ -78,16 +78,16 @@ export const HeritageSection: React.FC = () => {
 
           {/* Station 2: The Mujaddidi Renewal */}
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="relative p-8 rounded-2xl bg-[#061A4A]/70 border border-white/15 backdrop-blur-xs space-y-4 hover:border-[#C5A15A]/60 hover:-translate-y-1 transition-all duration-500 ease-out"
+            transition={{ duration: 0.5, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
+            className="relative p-3.5 sm:p-5 lg:p-7 rounded-xl sm:rounded-2xl bg-[#061A4A]/70 border border-white/15 backdrop-blur-xs space-y-1.5 sm:space-y-3 hover:border-[#C5A15A]/60 hover:-translate-y-1 transition-all duration-300 ease-out"
           >
-            <span className="font-serif-display text-3xl font-bold text-[#C5A15A] block">
+            <span className="font-serif-display text-lg sm:text-2xl font-bold text-[#C5A15A] block">
               ۰۲
             </span>
-            <h3 className="font-serif-display text-xl font-bold text-white">
+            <h3 className="font-serif-display text-sm sm:text-lg lg:text-xl font-bold text-white">
               The Mujaddidi Renewal
             </h3>
             <p className="text-xs sm:text-sm text-white/80 leading-relaxed">
@@ -99,16 +99,16 @@ export const HeritageSection: React.FC = () => {
 
           {/* Station 3: The Tahiri Heritage */}
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="relative p-8 rounded-2xl bg-[#061A4A]/70 border border-white/15 backdrop-blur-xs space-y-4 hover:border-[#C5A15A]/60 hover:-translate-y-1 transition-all duration-500 ease-out"
+            transition={{ duration: 0.5, delay: 0.24, ease: [0.22, 1, 0.36, 1] }}
+            className="relative p-3.5 sm:p-5 lg:p-7 rounded-xl sm:rounded-2xl bg-[#061A4A]/70 border border-white/15 backdrop-blur-xs space-y-1.5 sm:space-y-3 hover:border-[#C5A15A]/60 hover:-translate-y-1 transition-all duration-300 ease-out md:col-span-2 min-[1025px]:col-span-1 md:max-w-md md:mx-auto min-[1025px]:max-w-none w-full"
           >
-            <span className="font-serif-display text-3xl font-bold text-[#C5A15A] block">
+            <span className="font-serif-display text-lg sm:text-2xl font-bold text-[#C5A15A] block">
               ۰۳
             </span>
-            <h3 className="font-serif-display text-xl font-bold text-white">
+            <h3 className="font-serif-display text-sm sm:text-lg lg:text-xl font-bold text-white">
               The Tahiri Heritage
             </h3>
             <p className="text-xs sm:text-sm text-white/80 leading-relaxed">

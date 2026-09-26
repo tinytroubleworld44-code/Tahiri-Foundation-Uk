@@ -59,23 +59,21 @@ export const SalanaUrsAnnouncementSection: React.FC<SalanaUrsAnnouncementSection
     <section
       id="salana-urs-announcement-section"
       aria-label="Salana Urs Mubarak Announcement"
-      className="w-full py-8 sm:py-12 lg:py-16 bg-[#F7F9FF]/60"
+      className="w-full py-4 sm:py-8 lg:py-12 bg-[#F7F9FF]/60"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: '-60px' }}
-          className="relative rounded-[26px] overflow-hidden bg-gradient-to-br from-[#08216B] via-[#0B3095] to-[#06184A] border border-white/15 shadow-2xl shadow-[#0B3095]/20 text-white p-6 sm:p-8 md:p-10 lg:p-12"
+          viewport={{ once: true, margin: '-40px' }}
+          className="relative rounded-xl sm:rounded-[24px] overflow-hidden bg-gradient-to-br from-[#08216B] via-[#0B3095] to-[#06184A] border border-white/15 shadow-xl shadow-[#0B3095]/15 text-white p-3.5 sm:p-6 md:p-8 lg:p-10"
         >
-          {/* Subtle Decorative Star/Dotted Static Background Texture */}
+          {/* Subtle Decorative Texture */}
           <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-            {/* Subtle soft gradient glows */}
             <div className="absolute -top-28 -left-28 w-80 h-80 rounded-full bg-blue-400/15 blur-3xl" />
             <div className="absolute -bottom-28 -right-28 w-80 h-80 rounded-full bg-[#E5B842]/10 blur-3xl" />
             
-            {/* Fine static dot matrix */}
             <svg
               aria-hidden="true"
               focusable="false"
@@ -100,14 +98,14 @@ export const SalanaUrsAnnouncementSection: React.FC<SalanaUrsAnnouncementSection
           </div>
 
           {/* Content Composition */}
-          <div className="relative z-10 flex flex-col gap-6 sm:gap-8">
+          <div className="relative z-10 flex flex-col gap-4 sm:gap-6">
             
             {/* Top Row: Badge & Header Information */}
-            <div className="space-y-3.5">
+            <div className="space-y-2 sm:space-y-3">
               {/* Top Badge */}
               <div className="inline-flex items-center">
-                <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-semibold tracking-wide border border-[#E5B842]/50 bg-white/10 text-amber-200 backdrop-blur-xs shadow-xs">
-                  <Sparkles className="w-3.5 h-3.5 text-[#E5B842]" aria-hidden="true" focusable="false" />
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:px-3.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-semibold tracking-wide border border-[#E5B842]/50 bg-white/10 text-amber-200 backdrop-blur-xs shadow-xs">
+                  <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#E5B842]" aria-hidden="true" focusable="false" />
                   <span>Special Announcement · Upcoming Grand Gathering</span>
                 </span>
               </div>
@@ -115,77 +113,77 @@ export const SalanaUrsAnnouncementSection: React.FC<SalanaUrsAnnouncementSection
               {/* Main Event Title */}
               <h2
                 id="salana-urs-heading"
-                className="font-serif-display text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold text-white tracking-tight leading-[1.1]"
+                className="font-serif-display text-xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-extrabold text-white tracking-tight leading-[1.12]"
               >
                 SALANA URS MUBARAK
               </h2>
 
               {/* Date with Calendar Icon */}
-              <div className="flex items-center gap-2.5 text-[#E5B842] text-base sm:text-lg md:text-xl font-semibold tracking-wide pt-0.5">
-                <Calendar className="w-5 h-5 text-[#E5B842] shrink-0" aria-hidden="true" focusable="false" />
+              <div className="flex items-center gap-1.5 sm:gap-2 text-[#E5B842] text-xs sm:text-base md:text-lg font-semibold tracking-wide">
+                <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-[#E5B842] shrink-0" aria-hidden="true" focusable="false" />
                 <span>27 — 28 — 29 November 2026</span>
               </div>
 
               {/* Location with Pin Icon */}
-              <div className="flex items-center gap-2 text-white/85 text-xs sm:text-sm md:text-base font-normal">
-                <MapPin className="w-4 h-4 text-white/70 shrink-0" aria-hidden="true" focusable="false" />
+              <div className="flex items-center gap-1.5 sm:gap-2 text-white/85 text-[11px] sm:text-sm font-normal">
+                <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white/70 shrink-0" aria-hidden="true" focusable="false" />
                 <span>Dargah Allahabad Sharif, Kandiaro, Sindh, Pakistan</span>
               </div>
             </div>
 
             {/* Separator Line */}
-            <div className="w-full h-px bg-white/10 my-1" />
+            <div className="w-full h-px bg-white/10" />
 
-            {/* Bottom Panel: Two-Column composition on Desktop / Flex on Tablet / Stacked on Mobile */}
-            <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 lg:gap-8">
+            {/* Bottom Panel: Two-Column composition on Desktop / Responsive on Tablet & Mobile */}
+            <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5 sm:gap-6 lg:gap-8">
               
               {/* Left: Countdown Panel */}
-              <div className="flex-1 space-y-3">
+              <div className="flex-1 space-y-2.5">
                 {status === 'UPCOMING' && (
                   <>
-                    <div className="text-[11px] sm:text-xs font-bold tracking-widest uppercase text-amber-200/90 flex items-center gap-2">
+                    <div className="text-[10px] sm:text-xs font-bold tracking-widest uppercase text-amber-200/90 flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#E5B842]" />
                       <span>COUNTDOWN TO EVENT</span>
                     </div>
 
                     {/* 4 Countdown Boxes */}
-                    <div className="grid grid-cols-4 gap-2 sm:gap-3 max-w-sm sm:max-w-md">
+                    <div className="grid grid-cols-4 gap-1.5 sm:gap-2.5 max-w-xs sm:max-w-md">
                       {/* Days */}
-                      <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 text-center min-w-[60px] sm:min-w-[76px] shadow-inner shadow-black/10">
-                        <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-mono leading-none">
+                      <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-lg sm:rounded-xl p-1.5 sm:p-3 text-center min-w-0 shadow-inner shadow-black/10">
+                        <div className="text-lg sm:text-2xl lg:text-3xl font-bold text-white font-mono leading-none">
                           {timeRemaining.days}
                         </div>
-                        <div className="text-[10px] sm:text-xs uppercase tracking-wider text-amber-200/90 font-semibold mt-1">
+                        <div className="text-[8px] sm:text-[10px] uppercase tracking-wider text-amber-200/90 font-semibold mt-0.5 sm:mt-1">
                           Days
                         </div>
                       </div>
 
                       {/* Hours */}
-                      <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 text-center min-w-[60px] sm:min-w-[76px] shadow-inner shadow-black/10">
-                        <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-mono leading-none">
+                      <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-lg sm:rounded-xl p-1.5 sm:p-3 text-center min-w-0 shadow-inner shadow-black/10">
+                        <div className="text-lg sm:text-2xl lg:text-3xl font-bold text-white font-mono leading-none">
                           {String(timeRemaining.hours).padStart(2, '0')}
                         </div>
-                        <div className="text-[10px] sm:text-xs uppercase tracking-wider text-amber-200/90 font-semibold mt-1">
+                        <div className="text-[8px] sm:text-[10px] uppercase tracking-wider text-amber-200/90 font-semibold mt-0.5 sm:mt-1">
                           Hours
                         </div>
                       </div>
 
                       {/* Mins */}
-                      <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 text-center min-w-[60px] sm:min-w-[76px] shadow-inner shadow-black/10">
-                        <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-mono leading-none">
+                      <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-lg sm:rounded-xl p-1.5 sm:p-3 text-center min-w-0 shadow-inner shadow-black/10">
+                        <div className="text-lg sm:text-2xl lg:text-3xl font-bold text-white font-mono leading-none">
                           {String(timeRemaining.minutes).padStart(2, '0')}
                         </div>
-                        <div className="text-[10px] sm:text-xs uppercase tracking-wider text-amber-200/90 font-semibold mt-1">
+                        <div className="text-[8px] sm:text-[10px] uppercase tracking-wider text-amber-200/90 font-semibold mt-0.5 sm:mt-1">
                           Mins
                         </div>
                       </div>
 
                       {/* Secs */}
-                      <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 text-center min-w-[60px] sm:min-w-[76px] shadow-inner shadow-black/10">
-                        <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-mono leading-none">
+                      <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-lg sm:rounded-xl p-1.5 sm:p-3 text-center min-w-0 shadow-inner shadow-black/10">
+                        <div className="text-lg sm:text-2xl lg:text-3xl font-bold text-white font-mono leading-none">
                           {String(timeRemaining.seconds).padStart(2, '0')}
                         </div>
-                        <div className="text-[10px] sm:text-xs uppercase tracking-wider text-amber-200/90 font-semibold mt-1">
+                        <div className="text-[8px] sm:text-[10px] uppercase tracking-wider text-amber-200/90 font-semibold mt-0.5 sm:mt-1">
                           Secs
                         </div>
                       </div>
@@ -225,10 +223,10 @@ export const SalanaUrsAnnouncementSection: React.FC<SalanaUrsAnnouncementSection
                 <button
                   id="salana-urs-view-schedule-btn"
                   onClick={handleCtaClick}
-                  className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3.5 sm:py-4 rounded-[16px] bg-[#E5B842] hover:bg-[#D4AF37] text-[#0B3095] font-bold text-sm sm:text-base tracking-wide transition-all duration-200 shadow-md hover:shadow-xl hover:shadow-black/25 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#0B3095]"
+                  className="group w-full sm:w-auto h-11 sm:h-12 inline-flex items-center justify-center gap-2.5 px-5 sm:px-8 rounded-xl bg-[#E5B842] hover:bg-[#D4AF37] text-[#0B3095] font-bold text-xs sm:text-sm md:text-base tracking-wide transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#0B3095]"
                 >
                   <span>View Urs Schedule &amp; Guidelines</span>
-                  <ArrowRight className="w-4 h-4 text-[#0B3095] group-hover:translate-x-1.5 transition-transform duration-200" aria-hidden="true" focusable="false" />
+                  <ArrowRight className="w-4 h-4 text-[#0B3095] group-hover:translate-x-1 transition-transform duration-200" aria-hidden="true" focusable="false" />
                 </button>
               </div>
 

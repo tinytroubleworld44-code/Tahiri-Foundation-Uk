@@ -85,15 +85,15 @@ export const SplendidAbodePage: React.FC<SplendidAbodePageProps> = ({
       />
       
       {/* Header Banner in Royal Blue */}
-      <section className="bg-gradient-to-b from-[#061A4A] to-[#0B3095] text-white py-16 sm:py-20 relative overflow-hidden border-b border-[#0B3095]">
+      <section className="bg-gradient-to-b from-[#061A4A] to-[#0B3095] text-white py-10 sm:py-16 lg:py-20 relative overflow-hidden border-b border-[#0B3095]">
         <div className="absolute inset-0 bg-islamic-pattern-dark opacity-15 pointer-events-none" />
 
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-4">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-3 sm:space-y-4">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/20 bg-white/10 text-xs text-[#C5A15A] uppercase tracking-wider font-semibold backdrop-blur-xs"
+            className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full border border-white/20 bg-white/10 text-[10px] sm:text-xs text-[#C5A15A] uppercase tracking-wider font-semibold backdrop-blur-xs"
           >
             <Sparkles className="w-3.5 h-3.5" />
             <span>Islamic &amp; Sufi Educational Sanctuary</span>
@@ -104,7 +104,7 @@ export const SplendidAbodePage: React.FC<SplendidAbodePageProps> = ({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-serif-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white"
+            className="font-serif-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white"
           >
             The Splendid Abode of the Friend
           </motion.h1>
@@ -113,7 +113,7 @@ export const SplendidAbodePage: React.FC<SplendidAbodePageProps> = ({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="font-arabic text-3xl sm:text-4xl text-white/90 dir-rtl font-normal"
+            className="font-arabic text-xl sm:text-3xl text-white/90 dir-rtl font-normal"
           >
             جلوہ گاہِ دوست
           </motion.p>
@@ -135,7 +135,7 @@ export const SplendidAbodePage: React.FC<SplendidAbodePageProps> = ({
       </section>
 
       {/* Main Reading & Navigation Layout */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6 sm:mt-10 lg:mt-12">
         
         {/* If an article is active, show the focused article reading view */}
         {activeArticle ? (
@@ -148,10 +148,10 @@ export const SplendidAbodePage: React.FC<SplendidAbodePageProps> = ({
           </div>
         ) : (
           /* Library Index View: Sidebar + Article Catalog */
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
             
             {/* Desktop Left Sidebar / Mobile Collapsible Drawer */}
-            <aside className="lg:col-span-4 bg-[#F7F9FF] rounded-3xl border border-[#E4E9F2] p-5 sm:p-6 shadow-xs sticky top-24 space-y-6">
+            <aside className="lg:col-span-4 bg-[#F7F9FF] rounded-xl sm:rounded-2xl lg:rounded-3xl border border-[#E4E9F2] p-4 sm:p-5 lg:p-6 shadow-xs sticky top-24 space-y-4 sm:space-y-6">
               
               {/* Search Bar */}
               <div className="space-y-2">
@@ -276,12 +276,12 @@ export const SplendidAbodePage: React.FC<SplendidAbodePageProps> = ({
             <main className="lg:col-span-8 space-y-6">
               
               {/* Category Title & Banner */}
-              <div className="bg-[#F7F9FF] p-6 rounded-3xl border border-[#E4E9F2] shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div className="bg-[#F7F9FF] p-4 sm:p-6 rounded-xl sm:rounded-2xl lg:rounded-3xl border border-[#E4E9F2] shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
                 <div>
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-[#C5A15A]">
+                  <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#C5A15A]">
                     Active Collection
                   </span>
-                  <h2 className="font-serif-display text-2xl font-bold text-[#0B3095]">
+                  <h2 className="font-serif-display text-lg sm:text-2xl font-bold text-[#0B3095]">
                     {activeCategorySlug === 'all'
                       ? 'All Educational & Spiritual Teachings'
                       : CATEGORIES.find((c) => c.slug === activeCategorySlug)?.title}
@@ -294,7 +294,7 @@ export const SplendidAbodePage: React.FC<SplendidAbodePageProps> = ({
                 </div>
 
                 <div className="shrink-0">
-                  <span className="px-3 py-1 rounded-full bg-white text-xs font-semibold text-[#0B3095] border border-[#E4E9F2]">
+                  <span className="px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-white text-[11px] sm:text-xs font-semibold text-[#0B3095] border border-[#E4E9F2]">
                     {filteredArticles.length} Chapters
                   </span>
                 </div>
@@ -302,9 +302,9 @@ export const SplendidAbodePage: React.FC<SplendidAbodePageProps> = ({
 
               {/* Articles List */}
               {filteredArticles.length === 0 ? (
-                <div className="p-12 text-center bg-white rounded-3xl border border-[#E4E9F2] space-y-3">
+                <div className="p-8 sm:p-12 text-center bg-white rounded-xl sm:rounded-3xl border border-[#E4E9F2] space-y-3">
                   <BookOpen className="w-8 h-8 text-[#5B6472] mx-auto opacity-50" />
-                  <p className="font-serif-display text-lg text-[#111827]">
+                  <p className="font-serif-display text-base sm:text-lg text-[#111827]">
                     No treatises match your search criteria.
                   </p>
                   <button
@@ -318,7 +318,7 @@ export const SplendidAbodePage: React.FC<SplendidAbodePageProps> = ({
                   </button>
                 </div>
               ) : (
-                <div className="space-y-4">
+                <div className="space-y-3 sm:space-y-4">
                   {filteredArticles.map((art, idx) => (
                     <motion.div
                       key={art.id}
@@ -328,26 +328,26 @@ export const SplendidAbodePage: React.FC<SplendidAbodePageProps> = ({
                       transition={{ duration: 0.4, delay: Math.min(idx * 0.05, 0.3) }}
                       whileHover={{ y: -3, transition: { duration: 0.2 } }}
                       onClick={() => onSelectArticle(art.id)}
-                      className="group bg-white p-6 rounded-2xl border border-[#E4E9F2] hover:border-[#0B3095]/40 hover:shadow-md cursor-pointer transition-all duration-300 relative space-y-2.5"
+                      className="group bg-white p-4 sm:p-5 lg:p-6 rounded-xl sm:rounded-2xl border border-[#E4E9F2] hover:border-[#0B3095]/40 hover:shadow-md cursor-pointer transition-all duration-300 relative space-y-2 sm:space-y-2.5"
                     >
-                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
-                        <span className="font-semibold text-[#0B3095] uppercase tracking-wider text-[11px]">
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 sm:gap-2 text-xs">
+                        <span className="font-semibold text-[#0B3095] uppercase tracking-wider text-[10px] sm:text-[11px]">
                           {art.category}
                         </span>
-                        <div className="flex items-center gap-3 text-[#5B6472]">
+                        <div className="flex items-center gap-2.5 sm:gap-3 text-[#5B6472]">
                           {art.arabicTitle && (
-                            <span className="font-arabic text-sm text-[#0B3095]/80 font-normal dir-rtl">
+                            <span className="font-arabic text-xs sm:text-sm text-[#0B3095]/80 font-normal dir-rtl">
                               {art.arabicTitle}
                             </span>
                           )}
-                          <span className="flex items-center gap-1">
+                          <span className="flex items-center gap-1 text-[11px] sm:text-xs">
                             <Clock className="w-3 h-3 text-[#C5A15A]" />
                             <span>{art.readTime}</span>
                           </span>
                         </div>
                       </div>
 
-                      <h3 className="font-serif-display text-xl sm:text-2xl font-bold text-[#111827] group-hover:text-[#0B3095] transition-colors leading-snug">
+                      <h3 className="font-serif-display text-base sm:text-xl lg:text-2xl font-bold text-[#111827] group-hover:text-[#0B3095] transition-colors leading-snug">
                         {art.title}
                       </h3>
 
@@ -355,7 +355,7 @@ export const SplendidAbodePage: React.FC<SplendidAbodePageProps> = ({
                         {art.summary}
                       </p>
 
-                      <div className="pt-2 flex items-center justify-between text-xs font-semibold text-[#0B3095]">
+                      <div className="pt-1.5 sm:pt-2 flex items-center justify-between text-xs font-semibold text-[#0B3095]">
                         <span className="flex items-center gap-1.5 group-hover:underline">
                           <span>Read Full Treatise</span>
                           <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -374,53 +374,53 @@ export const SplendidAbodePage: React.FC<SplendidAbodePageProps> = ({
 
         {/* Natural Internal Linking for Spiritual Knowledge */}
         {onNavigate && (
-          <div className="mt-16 p-6 sm:p-8 rounded-3xl bg-[#F7F9FF] border border-[#E4E9F2]">
-            <h4 className="text-xs font-semibold uppercase tracking-widest text-[#0B3095] mb-4">
+          <div className="mt-10 sm:mt-16 p-4 sm:p-6 lg:p-8 rounded-xl sm:rounded-2xl lg:rounded-3xl bg-[#F7F9FF] border border-[#E4E9F2]">
+            <h4 className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-[#0B3095] mb-3 sm:mb-4">
               Related Sacred Topics &amp; Lineage
             </h4>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2.5 sm:gap-4">
               <button
                 onClick={() => onNavigate('zikr-e-qalbi')}
-                className="p-4 rounded-xl border border-[#E4E9F2] bg-white hover:border-[#0B3095]/30 hover:shadow-xs transition-all text-left group"
+                className="p-3 sm:p-4 rounded-xl border border-[#E4E9F2] bg-white hover:border-[#0B3095]/30 hover:shadow-xs transition-all text-left group"
               >
                 <div className="flex items-center gap-2 text-xs font-bold text-[#0B3095] mb-1">
                   <Heart className="w-3.5 h-3.5 text-[#C5A15A]" />
                   <span>Learn about Zikr-e-Qalbi</span>
                 </div>
-                <p className="text-xs text-[#5B6472]">Silent heart remembrance method &amp; virtues.</p>
+                <p className="text-[11px] sm:text-xs text-[#5B6472]">Silent heart remembrance method &amp; virtues.</p>
               </button>
 
               <button
                 onClick={() => onNavigate('sajjan-saeen')}
-                className="p-4 rounded-xl border border-[#E4E9F2] bg-white hover:border-[#0B3095]/30 hover:shadow-xs transition-all text-left group"
+                className="p-3 sm:p-4 rounded-xl border border-[#E4E9F2] bg-white hover:border-[#0B3095]/30 hover:shadow-xs transition-all text-left group"
               >
                 <div className="flex items-center gap-2 text-xs font-bold text-[#0B3095] mb-1">
                   <User className="w-3.5 h-3.5 text-[#C5A15A]" />
                   <span>Learn about Sajjan Saeen</span>
                 </div>
-                <p className="text-xs text-[#5B6472]">Spiritual guide and successor of the Tahiri path.</p>
+                <p className="text-[11px] sm:text-xs text-[#5B6472]">Spiritual guide and successor of the Tahiri path.</p>
               </button>
 
               <button
                 onClick={() => onNavigate('shajra')}
-                className="p-4 rounded-xl border border-[#E4E9F2] bg-white hover:border-[#0B3095]/30 hover:shadow-xs transition-all text-left group"
+                className="p-3 sm:p-4 rounded-xl border border-[#E4E9F2] bg-white hover:border-[#0B3095]/30 hover:shadow-xs transition-all text-left group"
               >
                 <div className="flex items-center gap-2 text-xs font-bold text-[#0B3095] mb-1">
                   <Compass className="w-3.5 h-3.5 text-[#C5A15A]" />
                   <span>Explore Shajra Shareef</span>
                 </div>
-                <p className="text-xs text-[#5B6472]">Complete 41-node golden chain of masters.</p>
+                <p className="text-[11px] sm:text-xs text-[#5B6472]">Complete 41-node golden chain of masters.</p>
               </button>
 
               <button
                 onClick={() => onNavigate('events', undefined, 'urs-mubarak-2026')}
-                className="p-4 rounded-xl border border-[#E4E9F2] bg-white hover:border-[#0B3095]/30 hover:shadow-xs transition-all text-left group"
+                className="p-3 sm:p-4 rounded-xl border border-[#E4E9F2] bg-white hover:border-[#0B3095]/30 hover:shadow-xs transition-all text-left group"
               >
                 <div className="flex items-center gap-2 text-xs font-bold text-[#0B3095] mb-1">
                   <Calendar className="w-3.5 h-3.5 text-[#C5A15A]" />
                   <span>View Annual Urs Mubarak details</span>
                 </div>
-                <p className="text-xs text-[#5B6472]">Gathering at Dargah Allahabad Sharif in Nov 2026.</p>
+                <p className="text-[11px] sm:text-xs text-[#5B6472]">Gathering at Dargah Allahabad Sharif in Nov 2026.</p>
               </button>
             </div>
           </div>

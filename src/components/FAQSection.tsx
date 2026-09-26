@@ -102,25 +102,25 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ onNavigate }) => {
     <section
       id="frequently-asked-questions"
       aria-label="Frequently Asked Questions"
-      className="py-20 lg:py-28 bg-[#F7F9FF] border-b border-[#E4E9F2]"
+      className="py-10 sm:py-14 md:py-18 lg:py-24 bg-[#F7F9FF] border-b border-[#E4E9F2]"
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center space-y-3 mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E4E9F2] text-[#0B3095] text-xs font-semibold uppercase tracking-wider shadow-2xs">
+        <div className="text-center space-y-2 sm:space-y-3 mb-6 sm:mb-10 lg:mb-12">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#E4E9F2] text-[#0B3095] text-[10px] sm:text-xs font-semibold uppercase tracking-wider shadow-2xs">
             <HelpCircle className="w-3.5 h-3.5 text-[#0B3095]" aria-hidden="true" focusable="false" />
             <span>Essential Knowledge &amp; Guidance</span>
           </div>
 
           <h2
             id="faq-section-heading"
-            className="font-serif-display text-3xl sm:text-4xl font-bold tracking-tight text-[#0B3095]"
+            className="font-serif-display text-xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#0B3095]"
           >
             Frequently Asked Questions
           </h2>
 
-          <p className="text-sm sm:text-base text-[#5B6472] max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xs sm:text-sm md:text-base text-[#5B6472] max-w-2xl mx-auto leading-relaxed">
             Verified answers regarding Tahiri Foundation UK, Dargah Allahabad Sharif, Shajra Shareef, and the spiritual path.
           </p>
 
@@ -128,13 +128,13 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ onNavigate }) => {
         </div>
 
         {/* FAQ Accordion List */}
-        <div className="space-y-3.5" role="region" aria-labelledby="faq-section-heading">
+        <div className="space-y-2.5 sm:space-y-3" role="region" aria-labelledby="faq-section-heading">
           {faqs.map((faq) => {
             const isOpen = openId === faq.id;
             return (
               <div
                 key={faq.id}
-                className={`rounded-2xl border transition-all duration-200 bg-white overflow-hidden shadow-2xs ${
+                className={`rounded-xl sm:rounded-2xl border transition-all duration-200 bg-white overflow-hidden shadow-2xs ${
                   isOpen ? 'border-[#0B3095]/30 ring-1 ring-[#0B3095]/10' : 'border-[#E4E9F2] hover:border-[#0B3095]/20'
                 }`}
               >
@@ -143,17 +143,17 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ onNavigate }) => {
                   onClick={() => handleToggle(faq.id)}
                   aria-expanded={isOpen}
                   aria-controls={`panel-${faq.id}`}
-                  className="w-full text-left px-5 sm:px-6 py-4 sm:py-5 flex items-center justify-between gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0B3095]"
+                  className="w-full text-left px-3.5 sm:px-6 py-3 sm:py-4 flex items-center justify-between gap-3 sm:gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0B3095]"
                 >
-                  <h3 className="font-serif-display text-base sm:text-lg font-bold text-[#111827] tracking-tight">
+                  <h3 className="font-serif-display text-sm sm:text-base md:text-lg font-bold text-[#111827] tracking-tight">
                     {faq.question}
                   </h3>
                   <div
-                    className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-200 ${
+                    className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-200 ${
                       isOpen ? 'bg-[#0B3095] text-white rotate-180' : 'bg-[#F7F9FF] text-[#5B6472]'
                     }`}
                   >
-                    <ChevronDown className="w-4 h-4" aria-hidden="true" focusable="false" />
+                    <ChevronDown className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-hidden="true" focusable="false" />
                   </div>
                 </button>
 
@@ -169,7 +169,7 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ onNavigate }) => {
                       transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
                       className="overflow-hidden"
                     >
-                      <div className="px-5 sm:px-6 pb-5 sm:pb-6 pt-1 text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9] space-y-3">
+                      <div className="px-3.5 sm:px-6 pb-3.5 sm:pb-5 pt-1 text-xs sm:text-sm text-[#475569] leading-relaxed border-t border-[#F1F5F9] space-y-2.5">
                         <p>{faq.answer}</p>
                         {faq.linkText && (
                           <div className="pt-1">

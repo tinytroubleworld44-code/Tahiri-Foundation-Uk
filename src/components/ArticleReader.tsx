@@ -76,10 +76,10 @@ export const ArticleReader: React.FC<ArticleReaderProps> = ({
 
       <article
         id={`article-reader-${article.id}`}
-        className="bg-white rounded-3xl border border-[#E4E9F2] shadow-sm p-6 sm:p-10 lg:p-14"
+        className="bg-white rounded-xl sm:rounded-2xl lg:rounded-3xl border border-[#E4E9F2] shadow-sm p-4 sm:p-8 lg:p-14"
       >
         {/* Top Breadcrumbs & Back Navigation */}
-        <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-[#E4E9F2] text-xs sm:text-sm">
+        <div className="flex flex-wrap items-center justify-between gap-3 sm:gap-4 pb-4 sm:pb-6 border-b border-[#E4E9F2] text-xs sm:text-sm">
           <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-[#5B6472]">
             <button
               onClick={onBackToLibrary}
@@ -91,10 +91,10 @@ export const ArticleReader: React.FC<ArticleReaderProps> = ({
             <span className="text-[#0B3095] font-semibold">{article.category}</span>
           </nav>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <button
               onClick={handleShare}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[#E4E9F2] hover:bg-[#F7F9FF] text-xs text-[#111827] transition-colors"
+              className="inline-flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg border border-[#E4E9F2] hover:bg-[#F7F9FF] text-xs text-[#111827] transition-colors"
               title="Copy article link"
             >
               {copied ? (
@@ -112,7 +112,7 @@ export const ArticleReader: React.FC<ArticleReaderProps> = ({
 
             <button
               onClick={onBackToLibrary}
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-[#F7F9FF] hover:bg-[#EEF3FF] text-xs font-semibold text-[#0B3095] border border-[#E4E9F2] transition-colors"
+              className="inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-lg bg-[#F7F9FF] hover:bg-[#EEF3FF] text-xs font-semibold text-[#0B3095] border border-[#E4E9F2] transition-colors"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
               <span>Back to Library</span>
@@ -121,12 +121,12 @@ export const ArticleReader: React.FC<ArticleReaderProps> = ({
         </div>
 
         {/* Article Header */}
-        <header className="pt-8 pb-8 space-y-4 max-w-[760px] mx-auto text-center sm:text-left">
-          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 text-xs">
-            <span className="px-3 py-1 rounded-full bg-[#0B3095] text-white font-semibold tracking-wider uppercase text-[11px]">
+        <header className="pt-4 sm:pt-8 pb-4 sm:pb-8 space-y-3 sm:space-y-4 max-w-[760px] mx-auto text-center sm:text-left">
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2.5 sm:gap-3 text-xs">
+            <span className="px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-[#0B3095] text-white font-semibold tracking-wider uppercase text-[10px] sm:text-[11px]">
               {article.category}
             </span>
-            <span className="flex items-center gap-1 text-[#5B6472]">
+            <span className="flex items-center gap-1 text-[#5B6472] text-[11px] sm:text-xs">
               <Clock className="w-3.5 h-3.5 text-[#C5A15A]" />
               <span>{article.readTime}</span>
             </span>
@@ -134,13 +134,13 @@ export const ArticleReader: React.FC<ArticleReaderProps> = ({
 
           <h1
             id="active-article-title"
-            className="font-serif-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0B3095] leading-[1.18]"
+            className="font-serif-display text-xl sm:text-3xl lg:text-5xl font-bold text-[#0B3095] leading-[1.18]"
           >
             {article.title}
           </h1>
 
           {article.arabicTitle && (
-            <p className="font-arabic text-2xl sm:text-3xl text-[#0B3095]/80 font-normal dir-rtl pt-1">
+            <p className="font-arabic text-lg sm:text-2xl lg:text-3xl text-[#0B3095]/80 font-normal dir-rtl pt-0.5 sm:pt-1">
               {article.arabicTitle}
             </p>
           )}

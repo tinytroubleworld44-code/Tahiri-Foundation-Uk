@@ -26,15 +26,15 @@ export const ZikrEQalbiPage: React.FC<ZikrEQalbiPageProps> = ({ onNavigate }) =>
       />
 
       {/* Hero Header in Royal Blue */}
-      <section className="bg-gradient-to-b from-[#061A4A] to-[#0B3095] text-white py-16 sm:py-20 relative overflow-hidden border-b border-[#0B3095]">
+      <section className="bg-gradient-to-b from-[#061A4A] to-[#0B3095] text-white py-10 sm:py-16 lg:py-20 relative overflow-hidden border-b border-[#0B3095]">
         <div className="absolute inset-0 bg-islamic-pattern-dark opacity-15 pointer-events-none" />
 
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-4">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-3 sm:space-y-4">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/20 bg-white/10 text-xs text-[#C5A15A] uppercase tracking-wider font-semibold backdrop-blur-xs"
+            className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full border border-white/20 bg-white/10 text-[10px] sm:text-xs text-[#C5A15A] uppercase tracking-wider font-semibold backdrop-blur-xs"
           >
             <Heart className="w-3.5 h-3.5 text-[#C5A15A]" />
             <span>Islamic Spiritual Remembrance</span>
@@ -45,7 +45,7 @@ export const ZikrEQalbiPage: React.FC<ZikrEQalbiPageProps> = ({ onNavigate }) =>
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-serif-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white"
+            className="font-serif-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white"
           >
             Zikr-e-Qalbi
           </motion.h1>
@@ -54,7 +54,7 @@ export const ZikrEQalbiPage: React.FC<ZikrEQalbiPageProps> = ({ onNavigate }) =>
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="font-arabic text-2xl sm:text-3xl text-amber-200/90 dir-rtl font-normal"
+            className="font-arabic text-xl sm:text-3xl text-amber-200/90 dir-rtl font-normal"
           >
             الذِّكْرُ الْقَلْبِيُّ الْخَفِيُّ
           </motion.p>
@@ -65,7 +65,7 @@ export const ZikrEQalbiPage: React.FC<ZikrEQalbiPageProps> = ({ onNavigate }) =>
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="text-white/85 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed"
+            className="text-white/85 text-xs sm:text-sm md:text-base max-w-2xl mx-auto leading-relaxed"
           >
             Silent heart remembrance is the cornerstone of the Naqshbandi Mujaddidi spiritual methodology, establishing perpetual divine awareness within the human heart through every breath.
           </motion.p>
@@ -73,35 +73,35 @@ export const ZikrEQalbiPage: React.FC<ZikrEQalbiPageProps> = ({ onNavigate }) =>
       </section>
 
       {/* Main Content Body */}
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 space-y-12">
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 space-y-8 sm:space-y-12">
         
         {/* Section 1: The Essence of Silent Heart Remembrance */}
-        <article className="space-y-4">
-          <span className="text-xs uppercase tracking-widest font-semibold text-[#0B3095] block">
+        <article className="space-y-3 sm:space-y-4">
+          <span className="text-[10px] sm:text-xs uppercase tracking-widest font-semibold text-[#0B3095] block">
             Core Concept
           </span>
           <h2
             id="essence-heading"
-            className="font-serif-display text-2xl sm:text-3xl font-bold text-[#0B3095] tracking-tight"
+            className="font-serif-display text-lg sm:text-2xl md:text-3xl font-bold text-[#0B3095] tracking-tight"
           >
             The Essence of Silent Heart Remembrance
           </h2>
           <div className="w-12 h-[2px] bg-[#C5A15A]" />
           
-          <p className="text-sm sm:text-base text-[#334155] leading-relaxed">
+          <p className="text-xs sm:text-sm md:text-base text-[#334155] leading-relaxed">
             In the Islamic spiritual tradition, remembrance (Dhikr) possesses both vocal and silent dimensions. <strong>Zikr-e-Qalbi</strong> (also referred to as <em>Zikr e Qalbi</em> or <em>al-Dhikr al-Khafi</em>) is the silent, inward remembrance that resonates directly within the spiritual heart without moving the tongue or emitting sound.
           </p>
 
-          <p className="text-sm sm:text-base text-[#334155] leading-relaxed">
+          <p className="text-xs sm:text-sm md:text-base text-[#334155] leading-relaxed">
             Because this practice is conducted internally, it is shielded from ostentation (Riya) and distraction. The noble Companions (Sahabah), particularly Hadhrat Abu Bakr as-Siddiq (R.A.), practiced silent contemplation while actively engaging in their daily obligations as righteous family members and community leaders.
           </p>
 
           {/* Quotation Callout */}
-          <div className="bg-[#F7F9FF] rounded-2xl border-l-4 border-[#0B3095] p-5 sm:p-6 my-4 border border-[#E4E9F2]">
-            <p className="font-serif-display text-base sm:text-lg italic text-[#0B3095] leading-snug">
+          <div className="bg-[#F7F9FF] rounded-xl sm:rounded-2xl border-l-4 border-[#0B3095] p-3.5 sm:p-5 my-3 sm:my-4 border border-[#E4E9F2]">
+            <p className="font-serif-display text-sm sm:text-base md:text-lg italic text-[#0B3095] leading-snug">
               “Beware! There is a piece of flesh in the body: if it is sound, the whole body is sound; if it is corrupt, the whole body is corrupt. Truly, it is the heart.”
             </p>
-            <span className="text-xs font-semibold text-[#5B6472] block mt-2">
+            <span className="text-[10px] sm:text-xs font-semibold text-[#5B6472] block mt-1.5">
               — Sahih al-Bukhari &amp; Sahih Muslim
             </span>
           </div>
